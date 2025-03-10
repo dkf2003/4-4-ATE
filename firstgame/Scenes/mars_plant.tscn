@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw2bfydgl7sqx"]
+
+[ext_resource type="Texture2D" uid="uid://ddt1drpyp084c" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_oquvv"]
+[ext_resource type="Script" uid="uid://d23qio0yq6gkh" path="res://scripts/mars_plant.gd" id="1_q778k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q778k"]
+atlas = ExtResource("1_oquvv")
+region = Rect2(112, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv5dg"]
+atlas = ExtResource("1_oquvv")
+region = Rect2(112, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rom3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q778k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv5dg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2bjh"]
+radius = 7.0
+
+[node name="Mars Plant" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_q778k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rom3s")
+autoplay = "default"
+frame_progress = 0.765491
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h2bjh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_mars_plant_body_entered"]

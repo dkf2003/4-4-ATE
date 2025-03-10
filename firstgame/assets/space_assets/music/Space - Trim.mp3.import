@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ck5nvwqgt0kpy"
+path="res://.godot/imported/Space - Trim.mp3-122f33cf8d9a866f0b34a374a34228aa.mp3str"
+
+[deps]
+
+source_file="res://assets/space_assets/music/Space - Trim.mp3"
+dest_files=["res://.godot/imported/Space - Trim.mp3-122f33cf8d9a866f0b34a374a34228aa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

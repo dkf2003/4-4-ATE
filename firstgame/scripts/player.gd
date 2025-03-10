@@ -10,3 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position += Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * speed * delta
 	move_and_slide()
+	
+func player():
+	pass

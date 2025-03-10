@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dua3f36i6kxhr"]
+
+[ext_resource type="Script" uid="uid://ebx56146dg7c" path="res://scripts/crate.gd" id="1_i4r3v"]
+[ext_resource type="Texture2D" uid="uid://ddt1drpyp084c" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_wp72f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp72f"]
+size = Vector2(18, 18)
+
+[node name="crate" type="Node2D"]
+script = ExtResource("1_i4r3v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wp72f")
+region_enabled = true
+region_rect = Rect2(112, 64, 16, 16)
+
+[node name="pickable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickable_area"]
+shape = SubResource("RectangleShape2D_wp72f")
+
+[connection signal="body_entered" from="pickable_area" to="." method="_on_pickable_area_body_entered"]
+[connection signal="body_exited" from="pickable_area" to="." method="_on_pickable_area_body_exited"]
