@@ -2,8 +2,8 @@ extends Node2D
 
 var player_in_area = false
 
-func _on_body_entered(body: Node2D) -> void:
-	print("'E' Collect")
+#func _on_body_entered(body: Node2D) -> void:
+	#print("'E' Collect")
 
 func _process(delta: float) -> void:
 	if player_in_area:
@@ -13,10 +13,12 @@ func _process(delta: float) -> void:
 
 
 func _on_pickable_area_body_entered(body: Node2D) -> void:
+	print("Player in")
 	if body.has_method("player"):
 		player_in_area = true
 
 
 func _on_pickable_area_body_exited(body: Node2D) -> void:
+	print("Player left")
 	if body.has_method("player"):
 		player_in_area = false
