@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=14 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
 [ext_resource type="Texture2D" uid="uid://byyk6ymw0yrfk" path="res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/Terrain.png" id="2_i6g32"]
 [ext_resource type="PackedScene" uid="uid://cw2bfydgl7sqx" path="res://Scenes/mars_plant.tscn" id="3_wrm1d"]
 [ext_resource type="AudioStream" uid="uid://ck5nvwqgt0kpy" path="res://assets/space_assets/music/Space - Trim.mp3" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://dk2tqfln3wu6x" path="res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg" id="4_v158k"]
+[ext_resource type="Script" uid="uid://dhteh02lyx8hu" path="res://Scenes/texture_health_bar.gd" id="5_v158k"]
 [ext_resource type="PackedScene" uid="uid://dua3f36i6kxhr" path="res://Scenes/crate.tscn" id="5_wowpa"]
+[ext_resource type="Texture2D" uid="uid://dbpblth3wp4v2" path="res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg" id="6_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://b44g17cggqfbc" path="res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg" id="7_rku1e"]
+[ext_resource type="Texture2D" uid="uid://bro5nglwxgvk3" path="res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg" id="8_rfjv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l0tm"]
 texture = ExtResource("2_i6g32")
@@ -180,6 +186,7 @@ texture = ExtResource("2_i6g32")
 sources/0 = SubResource("TileSetAtlasSource_1l0tm")
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_v158k")
 
 [node name="TileMap Ground" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_v158k")
@@ -198,6 +205,43 @@ position = Vector2(1, 0)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, 0)
 zoom = Vector2(3, 3)
+
+[node name="Node2D" type="Node2D" parent="Player/Camera2D"]
+position = Vector2(-17, -94)
+scale = Vector2(0.5, 0.2)
+
+[node name="TextureHealthBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
+offset_left = 208.0
+offset_top = -32.0
+offset_right = 400.0
+offset_bottom = 32.0
+value = 100.0
+texture_progress = ExtResource("4_v158k")
+script = ExtResource("5_v158k")
+
+[node name="TextureHungerBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
+offset_left = 208.0
+offset_top = 45.0
+offset_right = 400.0
+offset_bottom = 109.0
+value = 100.0
+texture_progress = ExtResource("6_o5yvi")
+
+[node name="TextureEnergyBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
+offset_left = 208.0
+offset_top = 125.0
+offset_right = 400.0
+offset_bottom = 189.0
+value = 100.0
+texture_progress = ExtResource("7_rku1e")
+
+[node name="TextureOxygenBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
+offset_left = 208.0
+offset_top = 205.0
+offset_right = 400.0
+offset_bottom = 269.0
+value = 100.0
+texture_progress = ExtResource("8_rfjv2")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_3dryh")

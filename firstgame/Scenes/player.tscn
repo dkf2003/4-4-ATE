@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6bww8w3j6yl1"]
+[gd_scene load_steps=10 format=3 uid="uid://c6bww8w3j6yl1"]
 
 [ext_resource type="Script" uid="uid://b7vbwpw87fjn2" path="res://scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://boqq2b0d2p76f" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="1_v0iea"]
@@ -42,6 +42,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3smsa"]
 radius = 6.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 6.0
+height = 16.0
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
@@ -57,3 +61,13 @@ frame_progress = 0.354445
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -7)
 shape = SubResource("CircleShape2D_3smsa")
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2(-1, -7)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

@@ -1,15 +1,22 @@
 extends CharacterBody2D
 
 @export var speed = 150
-# Called when the node enters the scene tree for the first time.
+@export var health = 100
+
+signal healthChanged
+
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position += Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * speed * delta
 	move_and_slide()
-	
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	health -= 10
+	healthChanged.emit(health)
+	print_debug(health)
+	print_debug(area.name)
+
 func player():
 	pass
