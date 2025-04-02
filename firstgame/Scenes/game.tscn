@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=17 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
@@ -6,11 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cw2bfydgl7sqx" path="res://Scenes/mars_plant.tscn" id="3_wrm1d"]
 [ext_resource type="AudioStream" uid="uid://ck5nvwqgt0kpy" path="res://assets/space_assets/music/Space - Trim.mp3" id="4_3dryh"]
 [ext_resource type="Texture2D" uid="uid://dk2tqfln3wu6x" path="res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg" id="4_v158k"]
-[ext_resource type="Script" uid="uid://dhteh02lyx8hu" path="res://Scenes/texture_health_bar.gd" id="5_v158k"]
+[ext_resource type="Script" uid="uid://dhteh02lyx8hu" path="res://scripts/texture_health_bar.gd" id="5_v158k"]
 [ext_resource type="PackedScene" uid="uid://dua3f36i6kxhr" path="res://Scenes/crate.tscn" id="5_wowpa"]
 [ext_resource type="Texture2D" uid="uid://dbpblth3wp4v2" path="res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg" id="6_o5yvi"]
+[ext_resource type="Script" uid="uid://c07p53uy16m1w" path="res://scripts/texture_hunger_bar.gd" id="7_1phco"]
 [ext_resource type="Texture2D" uid="uid://b44g17cggqfbc" path="res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg" id="7_rku1e"]
 [ext_resource type="Texture2D" uid="uid://bro5nglwxgvk3" path="res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg" id="8_rfjv2"]
+[ext_resource type="Script" uid="uid://bgp4f3gnqv38n" path="res://scripts/texture_energy_bar.gd" id="9_nb51f"]
+[ext_resource type="Script" uid="uid://bxvbvc0eb8csi" path="res://scripts/texture_oxygen_bar.gd" id="11_nnt18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l0tm"]
 texture = ExtResource("2_i6g32")
@@ -226,6 +229,7 @@ offset_right = 400.0
 offset_bottom = 109.0
 value = 100.0
 texture_progress = ExtResource("6_o5yvi")
+script = ExtResource("7_1phco")
 
 [node name="TextureEnergyBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
 offset_left = 208.0
@@ -234,6 +238,7 @@ offset_right = 400.0
 offset_bottom = 189.0
 value = 100.0
 texture_progress = ExtResource("7_rku1e")
+script = ExtResource("9_nb51f")
 
 [node name="TextureOxygenBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
 offset_left = 208.0
@@ -242,6 +247,7 @@ offset_right = 400.0
 offset_bottom = 269.0
 value = 100.0
 texture_progress = ExtResource("8_rfjv2")
+script = ExtResource("11_nnt18")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_3dryh")
@@ -281,3 +287,14 @@ position = Vector2(-84, 10)
 
 [node name="crate3" parent="crates" instance=ExtResource("5_wowpa")]
 position = Vector2(106, -13)
+
+[node name="OxygenTimer" type="Timer" parent="."]
+process_callback = 0
+
+[node name="HungerTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 10.0
+
+[connection signal="timeout" from="OxygenTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="OxygenTimer" to="." method="_on_oxygen_timer_timeout"]
+[connection signal="timeout" from="HungerTimer" to="." method="_on_hunger_timer_timeout"]
