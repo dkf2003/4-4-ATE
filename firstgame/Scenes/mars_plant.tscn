@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cw2bfydgl7sqx"]
 
-[ext_resource type="Texture2D" uid="uid://ddt1drpyp084c" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_oquvv"]
+[ext_resource type="Texture2D" uid="uid://ddt1drpyp084c" path="res://assets/Brackey Knight/sprites/world_tileset.png" id="1_oquvv"]
 [ext_resource type="Script" uid="uid://d23qio0yq6gkh" path="res://scripts/mars_plant.gd" id="1_q778k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q778k"]
