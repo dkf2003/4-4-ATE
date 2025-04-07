@@ -1,6 +1,6 @@
 res://Scenes/game.tscn
+res://test/test_player.gd
 res://scripts/player.gd
-res://test/test_character.gd
 res://Scenes/crate.tscn
 res://Scenes/mars_plant.tscn
 res://Scenes/player.tscn
