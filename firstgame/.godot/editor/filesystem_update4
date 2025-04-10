@@ -1,6 +1,8 @@
 res://Scenes/game.tscn
-res://test/test_player.gd
-res://scripts/player.gd
-res://Scenes/crate.tscn
+res://scripts/game.gd
+res://Scenes/oxygen_generator.gd
 res://Scenes/mars_plant.tscn
+res://Scenes/crate.tscn
+res://scripts/player.gd
+res://scripts/oxy_gen.gd
 res://Scenes/player.tscn
