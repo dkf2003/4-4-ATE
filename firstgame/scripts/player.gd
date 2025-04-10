@@ -24,8 +24,8 @@ func _process(delta: float) -> void:
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	health -= 10
 	healthChanged.emit(health)
-	print_debug(health)
-	print_debug(area.name)
+	#print_debug(health)
+	#print_debug(area.name)
 	
 func oxygenChange(change: int):
 	oxygenLevel -= change
