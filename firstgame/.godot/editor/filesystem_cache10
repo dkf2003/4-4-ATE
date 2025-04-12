@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744245989
+::res://::1744423174
 default_bus_layout.tres::AudioBusLayout/AudioBusLayout::6524643339731165841::1743275315::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4463799550838549381::1741549509::1744245907::1::::<><><>0<>0<>b51bd4f8b40cb8b6dae1fba1f8cc0790<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1743993386
@@ -122,12 +122,12 @@ green.png::CompressedTexture2D/CompressedTexture2D::3896279560051998512::1743993
 red.png::CompressedTexture2D/CompressedTexture2D::2443263267725858415::1743993387::1744245908::1::::<><><>0<>0<>de7da5cb5e10aa908889f3b4d7d249c4<>res://.godot/imported/red.png-47a557c3922e800f76686bc1a4ad0c3c.ctex::
 Script.svg::CompressedTexture2D/CompressedTexture2D::4817060143842260657::1743993387::1744245908::1::::<><><>0<>0<>05e1c91ae4a3e5ff80a257ec9b9f659c<>res://.godot/imported/Script.svg-34c66aae9c985e3e0470426acbbcda04.ctex::
 yellow.png::CompressedTexture2D/CompressedTexture2D::1043265824178416429::1743993387::1744245908::1::::<><><>0<>0<>1f29ae3064a14df675b46036c620de5d<>res://.godot/imported/yellow.png-b3cf3d463958a169d909273d3d742052.ctex::
-::res://assets/::1744245940
-::res://assets/Alice Work/::1744245908
-Drawing 3 (1).png::CompressedTexture2D/CompressedTexture2D::94093570851475572::1744245168::1744245908::1::::<><><>0<>0<>bb41fb21f0de5eb6e4e97399a9f10352<>res://.godot/imported/Drawing 3 (1).png-c1f9f8f4b8f06f1c25216ee66fe7da80.ctex::
-Drawing 4 (1).png::CompressedTexture2D/CompressedTexture2D::6752489834134430920::1744245168::1744245908::1::::<><><>0<>0<>005b5bb8331d09ee4dcbf35a922d98a5<>res://.godot/imported/Drawing 4 (1).png-888246f3cd512e2c24b40dd998744a85.ctex::
+::res://assets/::1744246255
+::res://assets/Alice Work/::1744246255
+Drawing 3 (1).png::CompressedTexture2D/CompressedTexture2D::94093570851475572::1744246255::1744246255::1::::<><><>0<>0<>bb41fb21f0de5eb6e4e97399a9f10352<>res://.godot/imported/Drawing 3 (1).png-c1f9f8f4b8f06f1c25216ee66fe7da80.ctex::
+Drawing 4 (1).png::CompressedTexture2D/CompressedTexture2D::6752489834134430920::1744246255::1744246255::1::::<><><>0<>0<>005b5bb8331d09ee4dcbf35a922d98a5<>res://.godot/imported/Drawing 4 (1).png-888246f3cd512e2c24b40dd998744a85.ctex::
 ::res://assets/brackeys_platformer_assets/::1744245940
-LICENSE & CREDITS.txt::TextFile::-1::1744245940::0::1::::<><><>0<>0<><>::
+LICENSE & CREDITS.txt::TextFile/TextFile::-1::1744245940::0::1::::<><><>0<>0<><>::
 ::res://assets/brackeys_platformer_assets/fonts/::1744245940
 PixelOperator8-Bold.ttf::FontFile/FontFile::1917116325992112344::1744245940::1744245940::1::::<><><>0<>0<>adc1ac4617388db4c37a0e4f68e569ce<>res://.godot/imported/PixelOperator8-Bold.ttf-e69bdd6f613ad84e79b90e6c36af6c14.fontdata::
 PixelOperator8.ttf::FontFile/FontFile::2219458686177981227::1744245940::1744245940::1::::<><><>0<>0<>5692d9f11a46056cc95352fcba8e70f2<>res://.godot/imported/PixelOperator8.ttf-4822237c63882e7e8566794820310fb8.fontdata::
@@ -152,7 +152,7 @@ slime_green.png::CompressedTexture2D/CompressedTexture2D::424447831011734397::17
 slime_purple.png::CompressedTexture2D/CompressedTexture2D::5132108262883760493::1744245940::1744245940::1::::<><><>0<>0<>12eac2af4f5c2430b7c4fef586b39dca<>res://.godot/imported/slime_purple.png-eba899fd7a6bf06f36da4e8018847f7c.ctex::
 world_tileset.png::CompressedTexture2D/CompressedTexture2D::7410636675694714456::1744245940::1744245940::1::::<><><>0<>0<>dbdca6269741bffbb7d7707f75a7e70c<>res://.godot/imported/world_tileset.png-e79a61bbddfb4c4d3adb9fd28f1e547f.ctex::
 ::res://assets/kenney_ui-pack/::1744245940
-License.txt::TextFile::-1::1744245940::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1744245940::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D/CompressedTexture2D::6246303104030570487::1744245940::1744245940::1::::<><><>0<>0<>2f87ab59a3d736397250929b15f2b3c1<>res://.godot/imported/Preview.png-d6918117ead1048ac7502cb7de54b34e.ctex::
 Sample.png::CompressedTexture2D/CompressedTexture2D::2933520969775823819::1744245940::1744245940::1::::<><><>0<>0<>9d6989d6d158854d10e0d78c28a8ba98<>res://.godot/imported/Sample.png-9a86f7c113f68ee5ee7585c02cba34fc.ctex::
 ::res://assets/kenney_ui-pack/Font/::1744245940
@@ -1493,31 +1493,34 @@ slide_vertical_grey_section_wide.svg::CompressedTexture2D/CompressedTexture2D::5
 star.svg::CompressedTexture2D/CompressedTexture2D::1779056879651189560::1744245940::1744245940::1::::<><><>0<>0<>0aa7c38fc8820c4cef1f2bde95153f00<>res://.godot/imported/star.svg-48aa3e55cff231a672fb39b338793f73.ctex::
 star_outline.svg::CompressedTexture2D/CompressedTexture2D::3399561843816714079::1744245940::1744245940::1::::<><><>0<>0<>646a1ee030f32e3ded1341de02548138<>res://.godot/imported/star_outline.svg-db223fe2f5dba0835888b95e6adcb9d7.ctex::
 star_outline_depth.svg::CompressedTexture2D/CompressedTexture2D::5599904268487508884::1744245940::1744245940::1::::<><><>0<>0<>b6f08a8a5f52ae41a92dc308cd8ed0e1<>res://.godot/imported/star_outline_depth.svg-2276dab347a3a542c762c33aa17d7bd9.ctex::
-::res://assets/other assets/::1744245940
+::res://assets/other assets/::1744246255
 Heart.png::CompressedTexture2D/CompressedTexture2D::8800809895379128437::1744245940::1744245940::1::::<><><>0<>0<>c09eb0c7396f5e44e80136a0ae56608a<>res://.godot/imported/Heart.png-cc9dd0478a5b85a127ee506ed5b3b13f.ctex::
-Keys.png::CompressedTexture2D/CompressedTexture2D::5403964133688514295::1744245940::1744245940::1::::<><><>0<>0<>32612a7d5db781fb3e4581f1605303ad<>res://.godot/imported/Keys.png-1894e5fc7a89d5b1a60b0e1ac4fc3707.ctex::
-Vent.png::CompressedTexture2D/CompressedTexture2D::364555073688625852::1744245940::1744245940::1::::<><><>0<>0<>83780c84c5b87fb8e857cec9b000c967<>res://.godot/imported/Vent.png-ae6549c42133649ba56f6b2f77613a14.ctex::
+Keys.png::CompressedTexture2D/CompressedTexture2D::5403964133688514295::1744246255::1744246255::1::::<><><>0<>0<>32612a7d5db781fb3e4581f1605303ad<>res://.godot/imported/Keys.png-1894e5fc7a89d5b1a60b0e1ac4fc3707.ctex::
+Vent.png::CompressedTexture2D/CompressedTexture2D::364555073688625852::1744246255::1744246255::1::::<><><>0<>0<>83780c84c5b87fb8e857cec9b000c967<>res://.godot/imported/Vent.png-ae6549c42133649ba56f6b2f77613a14.ctex::
 ::res://assets/RPG Adventure - Free Pack/::1744245940
 ::res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/::1744245940
 Terrain.png::CompressedTexture2D/CompressedTexture2D::4121161806774036616::1744245940::1744245940::1::::<><><>0<>0<>cde8a212c057edd3153fea1e83aa0a60<>res://.godot/imported/Terrain.png-444ac3a64b74279740597a284d036a9c.ctex::
-::res://assets/space_assets/::1744245940
-TileSet v1.0.png::CompressedTexture2D/CompressedTexture2D::8032564188145062156::1744245940::1744245940::1::::<><><>0<>0<>c89b6313c7a8d609ea8f63513f1591b4<>res://.godot/imported/TileSet v1.0.png-5218b5a30d261eecc854b36a0da2dc5e.ctex::
+::res://assets/space_assets/::1744422812
+sci-fy3.png::CompressedTexture2D/CompressedTexture2D::1932819157310951003::1744422795::1744422812::1::::<><><>0<>0<>4eeb02938023b79f45fcbbd5f6c1dd34<>res://.godot/imported/sci-fy3.png-9c61bf3136c25e70f1acafd5b21b8a0a.ctex::
+TileSet v1.0.png::CompressedTexture2D/CompressedTexture2D::8032564188145062156::1744246255::1744246255::1::::<><><>0<>0<>c89b6313c7a8d609ea8f63513f1591b4<>res://.godot/imported/TileSet v1.0.png-5218b5a30d261eecc854b36a0da2dc5e.ctex::
 ::res://assets/space_assets/music/::1744245906
 Space - Trim.mp3::AudioStreamMP3/AudioStreamMP3::5537489139495857526::1743275315::1744245906::1::::<><><>0<>0<>1456fdb5032792322d4b8d035f91f341<>res://.godot/imported/Space - Trim.mp3-122f33cf8d9a866f0b34a374a34228aa.mp3str::
-::res://Scenes/::1744245940
-crate.tscn::PackedScene::8564749447555006939::1744245940::0::1::::<><><>0<>0<><>::uid://ebx56146dg7c::::res://scripts/crate.gd<>uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png
-game.tscn::PackedScene::2349415308323318932::1744245940::0::1::::<><><>0<>0<><>::uid://c6bww8w3j6yl1::::res://Scenes/player.tscn<>uid://6jxpt4vx57b8::::res://scripts/game.gd<>uid://byyk6ymw0yrfk::::res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/Terrain.png<>uid://cw2bfydgl7sqx::::res://Scenes/mars_plant.tscn<>uid://ck5nvwqgt0kpy::::res://assets/space_assets/music/Space - Trim.mp3<>uid://dk2tqfln3wu6x::::res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg<>uid://dhteh02lyx8hu::::res://scripts/texture_health_bar.gd<>uid://dua3f36i6kxhr::::res://Scenes/crate.tscn<>uid://dbpblth3wp4v2::::res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg<>uid://c07p53uy16m1w::::res://scripts/texture_hunger_bar.gd<>uid://b44g17cggqfbc::::res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg<>uid://bro5nglwxgvk3::::res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg<>uid://bgp4f3gnqv38n::::res://scripts/texture_energy_bar.gd<>uid://bxvbvc0eb8csi::::res://scripts/texture_oxygen_bar.gd<>uid://dmpbfnl4qtxjg::::res://assets/space_assets/TileSet v1.0.png<>uid://rn6b2n16euc1::::res://scripts/oxy_gen.gd<>uid://ci8yq8yjw1fl4::::res://assets/other assets/Keys.png<>uid://6vefpkhfcxpr::::res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf
-mars_plant.tscn::PackedScene::6372805038228227503::1744245940::0::1::::<><><>0<>0<><>::uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png<>uid://d23qio0yq6gkh::::res://scripts/mars_plant.gd
-player.tscn::PackedScene::6952136727767753080::1744245940::0::1::::<><><>0<>0<><>::uid://b7vbwpw87fjn2::::res://scripts/player.gd<>uid://bltybyi5har1::::res://assets/Alice Work/Drawing 3 (1).png
-::res://scripts/::1744245940
+::res://Scenes/::1744425918
+crate.tscn::PackedScene::8564749447555006939::1744425918::0::1::::<><><>0<>0<><>::uid://ebx56146dg7c::::res://scripts/crate.gd<>uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png
+game.tscn::PackedScene::2349415308323318932::1744426076::0::1::::<><><>0<>0<><>::uid://c6bww8w3j6yl1::::res://Scenes/player.tscn<>uid://6jxpt4vx57b8::::res://scripts/game.gd<>uid://byyk6ymw0yrfk::::res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/Terrain.png<>uid://cw2bfydgl7sqx::::res://Scenes/mars_plant.tscn<>uid://ck5nvwqgt0kpy::::res://assets/space_assets/music/Space - Trim.mp3<>uid://2sjip85yxxcd::::res://assets/space_assets/sci-fy3.png<>uid://dk2tqfln3wu6x::::res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg<>uid://dhteh02lyx8hu::::res://scripts/texture_health_bar.gd<>uid://dua3f36i6kxhr::::res://Scenes/crate.tscn<>uid://dbpblth3wp4v2::::res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg<>uid://c07p53uy16m1w::::res://scripts/texture_hunger_bar.gd<>uid://b44g17cggqfbc::::res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg<>uid://bro5nglwxgvk3::::res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg<>uid://bgp4f3gnqv38n::::res://scripts/texture_energy_bar.gd<>uid://bxvbvc0eb8csi::::res://scripts/texture_oxygen_bar.gd<>uid://dmpbfnl4qtxjg::::res://assets/space_assets/TileSet v1.0.png<>uid://rn6b2n16euc1::::res://scripts/oxy_gen.gd<>uid://ci8yq8yjw1fl4::::res://assets/other assets/Keys.png<>uid://6vefpkhfcxpr::::res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf<>uid://c4480k2osyi6v::::res://scripts/solar_panel.gd
+mars_plant.tscn::PackedScene::6372805038228227503::1744425918::0::1::::<><><>0<>0<><>::uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png<>uid://d23qio0yq6gkh::::res://scripts/mars_plant.gd
+player.tscn::PackedScene::6952136727767753080::1744425918::0::1::::<><><>0<>0<><>::uid://b7vbwpw87fjn2::::res://scripts/player.gd<>uid://bltybyi5har1::::res://assets/Alice Work/Drawing 3 (1).png
+moxie_input.gd::GDScript::3807178462517703412::1744426091::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/::1744423320
 crate.gd::GDScript/GDScript::284271486704913794::1743276066::0::1::::<>Node2D<><>0<>0<><>::
 game.gd::GDScript/GDScript::2195857874036820611::1744228052::0::1::::<>Node2D<><>0<>0<><>::
 mars_plant.gd::GDScript/GDScript::9113149939715423531::1743275315::0::1::::<>Area2D<><>0<>0<><>::
-oxy_gen.gd::GDScript::1221932704654832062::1744245940::0::1::::<>Node2D<><>0<>0<><>::
-player.gd::GDScript::4675916440782355265::1744245940::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+oxy_gen.gd::GDScript/GDScript::1221932704654832062::1744246255::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript/GDScript::4675916440782355265::1744246255::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+solar_panel.gd::GDScript::6870233660970114739::1744423320::0::1::::<>Node2D<><>0<>0<><>::
 texture_energy_bar.gd::GDScript/GDScript::2840290614127475239::1743621038::0::1::::<>TextureProgressBar<><>0<>0<><>::
 texture_health_bar.gd::GDScript/GDScript::7690063857727342686::1743620521::0::1::::<>TextureProgressBar<><>0<>0<><>::
 texture_hunger_bar.gd::GDScript/GDScript::6594588377851888850::1743622369::0::1::::<>TextureProgressBar<><>0<>0<><>::
 texture_oxygen_bar.gd::GDScript/GDScript::4044214382719059148::1743622099::0::1::::<>TextureProgressBar<><>0<>0<><>::
 ::res://test/::1744245940
-test_player.gd::GDScript::2644475096054980794::1744245940::0::1::::<>GutTest<><>0<>0<><>::
+test_player.gd::GDScript/GDScript::2644475096054980794::1744245940::0::1::::<>GutTest<><>0<>0<><>::

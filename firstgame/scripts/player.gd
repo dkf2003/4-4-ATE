@@ -5,6 +5,7 @@ class_name Player extends CharacterBody2D
 @export var oxygenLevel = 100
 @export var hunger = 100
 @export var energy = 100
+var canMove = false
 
 signal healthChanged
 signal energyChanged
@@ -15,17 +16,21 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	position += Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * speed * delta
-	#print_debug(position)
-	#energy -= 1
-	#energyChanged.emit(energy)
-	move_and_slide()
+	if canMove:
+		position += Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * speed * delta
+		#print_debug(position)
+		#energy -= 1
+		#energyChanged.emit(energy)
+		move_and_slide()
 
-func _on_hitbox_area_entered(area: Area2D) -> void:
-	health -= 10
-	healthChanged.emit(health)
-	#print_debug(health)
-	#print_debug(area.name)
+func stopMove():
+	canMove = not canMove
+
+#func _on_hitbox_area_entered(area: Area2D) -> void:
+	#health -= 10
+	#healthChanged.emit(health)
+	##print_debug(health)
+	##print_debug(area.name)
 	
 func oxygenChange(change: int):
 	oxygenLevel -= change

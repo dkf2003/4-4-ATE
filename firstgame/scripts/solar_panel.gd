@@ -15,9 +15,6 @@ func _process(delta: float) -> void:
 	else:
 		$Window.hide()
 		$KeyPrompt.hide()
-		#if $"../OxygenTimer".is_stopped():
-			#$"../OxygenTimer".start()
-			#$"../HungerTimer".start()
 
 func _on_window_close_requested() -> void:
 	$Window.hide()
@@ -25,26 +22,12 @@ func _on_window_close_requested() -> void:
 	$"../HungerTimer".start()
 	stopMove.emit()
 
-
-#func _on_pickable_area_body_entered(body: Node2D) -> void:
-	#print("Player in")
-	#if body.has_method("player"):
-		#player_in_area = true
-#
-#
-#func _on_pickable_area_body_exited(body: Node2D) -> void:
-	#print("Player left")
-	#if body.has_method("player"):
-		#player_in_area = false
-
-
-func _on_oxygen_generator_body_entered(body: Node2D) -> void:
+func _on_solar_panel_area_body_entered(body: Node2D) -> void:
 	print("Player in")
 	if body.has_method("player"):
 		player_in_area = true
 
-
-func _on_oxygen_generator_body_exited(body: Node2D) -> void:
-	print("Player left")
+func _on_solar_panel_area_body_exited(body: Node2D) -> void:
+	print("Player out")
 	if body.has_method("player"):
 		player_in_area = false

@@ -5,16 +5,22 @@ extends Node2D
 @onready var textureOxygenBar = $Player/Camera2D/Node2D/TextureOxygenBar
 @onready var textureHungerBar = $Player/Camera2D/Node2D/TextureHungerBar
 @onready var player = $Player
+@onready var moxie = $OxyGen
+@onready var moxieInput = $MOXIEInput
+@onready var solarPanel = $SolarPanel
 signal oxygenTimer
 signal hungerTimer
+signal stopMove
 
 func _ready() -> void:
-	$OxygenTimer.start()
-	$HungerTimer.start()
 	player.healthChanged.connect(textureHealthBar.updateHealth)
 	player.energyChanged.connect(textureEnergyBar.updateEnergy)
 	player.oxygenChanged.connect(textureOxygenBar.updateOxygen)
 	player.hungerChanged.connect(textureHungerBar.updateHunger)
+	moxie.stopMove.connect(player.stopMove)
+	moxieInput.stopMove.connect(player.stopMove)
+	solarPanel.stopMove.connect(player.stopMove)
+	stopMove.connect(player.stopMove)
 	oxygenTimer.connect(player.oxygenChange)
 	hungerTimer.connect(player.hungerChange)
 
@@ -26,4 +32,9 @@ func _on_hunger_timer_timeout() -> void:
 
 func _process(delta: float) -> void:
 	pass
-	
+
+func _on_intro_text_close_requested() -> void:
+	$OxygenTimer.start()
+	$HungerTimer.start()
+	stopMove.emit()
+	$IntroText.hide()

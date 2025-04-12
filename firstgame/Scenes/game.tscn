@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=32 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
 [ext_resource type="Texture2D" uid="uid://byyk6ymw0yrfk" path="res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/Terrain.png" id="2_i6g32"]
 [ext_resource type="PackedScene" uid="uid://cw2bfydgl7sqx" path="res://Scenes/mars_plant.tscn" id="3_wrm1d"]
 [ext_resource type="AudioStream" uid="uid://ck5nvwqgt0kpy" path="res://assets/space_assets/music/Space - Trim.mp3" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://2sjip85yxxcd" path="res://assets/space_assets/sci-fy3.png" id="4_iivbl"]
 [ext_resource type="Texture2D" uid="uid://dk2tqfln3wu6x" path="res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg" id="4_v158k"]
 [ext_resource type="Script" uid="uid://dhteh02lyx8hu" path="res://scripts/texture_health_bar.gd" id="5_v158k"]
 [ext_resource type="PackedScene" uid="uid://dua3f36i6kxhr" path="res://Scenes/crate.tscn" id="5_wowpa"]
@@ -18,6 +19,8 @@
 [ext_resource type="Script" uid="uid://rn6b2n16euc1" path="res://scripts/oxy_gen.gd" id="16_ewbju"]
 [ext_resource type="Texture2D" uid="uid://ci8yq8yjw1fl4" path="res://assets/other assets/Keys.png" id="17_85qyi"]
 [ext_resource type="FontFile" uid="uid://6vefpkhfcxpr" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="18_85qyi"]
+[ext_resource type="Script" uid="uid://c4480k2osyi6v" path="res://scripts/solar_panel.gd" id="20_7nbq1"]
+[ext_resource type="Script" uid="uid://buihw5bifsth1" path="res://scripts/moxie_input.gd" id="21_exi56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l0tm"]
 texture = ExtResource("2_i6g32")
@@ -487,12 +490,88 @@ texture = ExtResource("15_nb51f")
 [sub_resource type="TileSet" id="TileSet_ewbju"]
 sources/0 = SubResource("TileSetAtlasSource_nnt18")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nbq1"]
+texture = ExtResource("4_iivbl")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_exi56"]
+sources/0 = SubResource("TileSetAtlasSource_7nbq1")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nb51f"]
 size = Vector2(32, 32)
 
 [sub_resource type="LabelSettings" id="LabelSettings_iivbl"]
 line_spacing = 8.0
 font = ExtResource("18_85qyi")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iivbl"]
+size = Vector2(210, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
+size = Vector2(34, 34)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_v158k")
@@ -506,12 +585,17 @@ layer_0/tile_data = PackedInt32Array(-983066, 0, 11, -917530, 0, 12, -851994, 0,
 tile_set = SubResource("TileSet_ewbju")
 rendering_quadrant_size = 8
 format = 2
-layer_0/tile_data = PackedInt32Array(-393203, 0, 0, -393202, 65536, 0, -393201, 131072, 0, -393200, 196608, 0, -393199, 131072, 0, -393198, 196608, 0, -393197, 131072, 0, -393196, 196608, 0, -393195, 131072, 0, -393194, 196608, 0, -393193, 131072, 0, -393192, 196608, 0, -393191, 262144, 0, -327667, 0, 1, -327666, 65536, 1, -327665, 131072, 1, -327664, 196608, 1, -327663, 131072, 1, -327662, 196608, 1, -327661, 131072, 1, -327660, 196608, 1, -327659, 131072, 1, -327658, 196608, 1, -327657, 131072, 1, -327656, 196608, 1, -327655, 262144, 1, -393190, 327680, 0, -327654, 327680, 1, -262119, 262144, 2, -196583, 262144, 3, -262118, 327680, 2, -196582, 327680, 3, -131047, 262144, 2, -65511, 262144, 3, -131046, 327680, 2, -65510, 327680, 3, 25, 262144, 2, 65561, 262144, 3, 26, 327680, 2, 65562, 327680, 3, 131097, 262144, 2, 196633, 262144, 3, 131098, 327680, 2, 196634, 327680, 3, 262169, 262144, 4, 327705, 262144, 5, 262170, 327680, 4, 327706, 327680, 5, 262167, 131072, 4, 327703, 131072, 5, 262168, 196608, 4, 327704, 196608, 5, 262165, 131072, 4, 327701, 131072, 5, 262166, 196608, 4, 327702, 196608, 5, 262163, 131072, 4, 327699, 131072, 5, 262164, 196608, 4, 327700, 196608, 5, 262161, 131072, 4, 327697, 131072, 5, 262162, 196608, 4, 327698, 196608, 5, 262159, 131072, 4, 327695, 131072, 5, 262160, 196608, 4, 327696, 196608, 5, 262157, 0, 4, 327693, 0, 5, 262158, 65536, 4, 327694, 65536, 5, -262131, 0, 2, -196595, 0, 3, -262130, 65536, 2, -196594, 65536, 3, -131059, 0, 2, -65523, 0, 3, -131058, 65536, 2, -65522, 65536, 3, 13, 0, 2, 65549, 0, 3, 14, 65536, 2, 65550, 65536, 3, 131085, 0, 2, 196621, 0, 3, 131086, 65536, 2, 196622, 65536, 3, -262129, 131072, 2, -196593, 131072, 3, -262128, 196608, 2, -196592, 196608, 3, -131057, 131072, 2, -65521, 131072, 3, -131056, 196608, 2, -65520, 196608, 3, -131055, 131072, 2, -65519, 131072, 3, -131054, 196608, 2, -65518, 196608, 3, -131053, 131072, 2, -65517, 131072, 3, -131052, 196608, 2, -65516, 196608, 3, -262127, 131072, 2, -196591, 131072, 3, -262126, 196608, 2, -196590, 196608, 3, -262125, 131072, 2, -196589, 131072, 3, -262124, 196608, 2, -196588, 196608, 3, -262123, 131072, 2, -196587, 131072, 3, -262122, 196608, 2, -196586, 196608, 3, -262121, 131072, 2, -196585, 131072, 3, -262120, 196608, 2, -196584, 196608, 3, -131049, 131072, 2, -65513, 131072, 3, -131048, 196608, 2, -65512, 196608, 3, -131051, 131072, 2, -65515, 131072, 3, -131050, 196608, 2, -65514, 196608, 3, 21, 131072, 2, 65557, 131072, 3, 22, 196608, 2, 65558, 196608, 3, 23, 131072, 2, 65559, 131072, 3, 24, 196608, 2, 65560, 196608, 3, 131093, 131072, 2, 196629, 131072, 3, 131094, 196608, 2, 196630, 196608, 3, 131095, 262144, 6, 196631, 262144, 7, 131096, 327680, 6, 196632, 327680, 7, 131091, 131072, 2, 196627, 131072, 3, 131092, 196608, 2, 196628, 196608, 3, 19, 131072, 2, 65555, 131072, 3, 20, 196608, 2, 65556, 196608, 3, 17, 131072, 2, 65553, 131072, 3, 18, 196608, 2, 65554, 196608, 3, 131089, 131072, 2, 196625, 131072, 3, 131090, 196608, 2, 196626, 196608, 3, 131087, 131072, 2, 196623, 131072, 3, 131088, 196608, 2, 196624, 196608, 3, 15, 131072, 2, 65551, 131072, 3, 16, 196608, 2, 65552, 196608, 3)
+layer_0/tile_data = PackedInt32Array(-393203, 0, 0, -393202, 65536, 0, -393201, 131072, 0, -393200, 196608, 0, -393199, 131072, 0, -393198, 196608, 0, -393197, 131072, 0, -393196, 196608, 0, -393195, 131072, 0, -393194, 196608, 0, -393193, 131072, 0, -393192, 196608, 0, -393191, 262144, 0, -327667, 0, 1, -327666, 65536, 1, -327665, 131072, 1, -327664, 196608, 1, -327663, 131072, 1, -327662, 196608, 1, -327661, 131072, 1, -327660, 196608, 1, -327659, 131072, 1, -327658, 196608, 1, -327657, 131072, 1, -327656, 196608, 1, -327655, 262144, 1, -393190, 327680, 0, -327654, 327680, 1, -262119, 262144, 2, -196583, 262144, 3, -262118, 327680, 2, -196582, 327680, 3, -131047, 262144, 2, -65511, 262144, 3, -131046, 327680, 2, -65510, 327680, 3, 25, 262144, 2, 65561, 262144, 3, 26, 327680, 2, 65562, 327680, 3, 131097, 262144, 2, 196633, 262144, 3, 131098, 327680, 2, 196634, 327680, 3, 262169, 262144, 4, 327705, 262144, 5, 262170, 327680, 4, 327706, 327680, 5, 262167, 131072, 4, 327703, 131072, 5, 262168, 196608, 4, 327704, 196608, 5, 262165, 131072, 4, 327701, 131072, 5, 262166, 196608, 4, 327702, 196608, 5, 262163, 131072, 4, 327699, 131072, 5, 262164, 196608, 4, 327700, 196608, 5, 262161, 131072, 4, 327697, 131072, 5, 262162, 196608, 4, 327698, 196608, 5, 262159, 131072, 4, 327695, 131072, 5, 262160, 196608, 4, 327696, 196608, 5, 262157, 0, 4, 327693, 0, 5, 262158, 65536, 4, 327694, 65536, 5, -262131, 0, 2, -196595, 0, 3, -262130, 65536, 2, -196594, 65536, 3, -131059, 0, 2, -65523, 0, 3, -131058, 65536, 2, -65522, 65536, 3, 13, 0, 2, 65549, 0, 3, 14, 65536, 2, 65550, 65536, 3, 131085, 0, 2, 196621, 0, 3, 131086, 65536, 2, 196622, 65536, 3, -262129, 131072, 2, -196593, 131072, 3, -262128, 196608, 2, -196592, 196608, 3, -131057, 131072, 2, -65521, 131072, 3, -131056, 196608, 2, -65520, 196608, 3, -131055, 131072, 2, -65519, 131072, 3, -131054, 196608, 2, -65518, 196608, 3, -131053, 131072, 2, -65517, 131072, 3, -131052, 196608, 2, -65516, 196608, 3, -262127, 131072, 2, -196591, 131072, 3, -262126, 196608, 2, -196590, 196608, 3, -262125, 131072, 2, -196589, 131072, 3, -262124, 196608, 2, -196588, 196608, 3, -262123, 131072, 2, -196587, 131072, 3, -262122, 196608, 2, -196586, 196608, 3, -262121, 131072, 2, -196585, 131072, 3, -262120, 196608, 2, -196584, 196608, 3, -131049, 131072, 2, -65513, 131072, 3, -131048, 196608, 2, -65512, 196608, 3, -131051, 131072, 2, -65515, 131072, 3, -131050, 196608, 2, -65514, 196608, 3, 21, 131072, 2, 65557, 131072, 3, 22, 196608, 2, 65558, 196608, 3, 23, 131072, 2, 65559, 131072, 3, 24, 196608, 2, 65560, 196608, 3, 131093, 131072, 2, 196629, 131072, 3, 131094, 196608, 2, 196630, 196608, 3, 131095, 262144, 6, 196631, 262144, 7, 131096, 327680, 6, 196632, 327680, 7, 131091, 131072, 2, 196627, 131072, 3, 131092, 196608, 2, 196628, 196608, 3, 19, 131072, 2, 65555, 131072, 3, 20, 196608, 2, 65556, 196608, 3, 17, 131072, 2, 65553, 131072, 3, 18, 196608, 2, 65554, 196608, 3, 131089, 131072, 2, 196625, 131072, 3, 131090, 196608, 2, 196626, 196608, 3, 131087, 131072, 2, 196623, 131072, 3, 131088, 196608, 2, 196624, 196608, 3, 15, 131072, 2, 65551, 131072, 3, 16, 196608, 2, 65552, 196608, 3, 524308, 0, 6, 589844, 0, 7, 524309, 65536, 6, 589845, 65536, 7)
 
 [node name="TileMap2 Objects" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_v158k")
 format = 2
 layer_0/tile_data = PackedInt32Array(458743, 524288, 8, 262148, 524288, 8, -196614, 524288, 8, 196593, 524288, 8, 262139, 524288, 8, -655346, 524288, 8, -589831, 524288, 8, -458772, 524288, 8, 589801, 524288, 8, 589826, 393216, 9, 589847, 393216, 9, 655369, 393216, 9, -196606, 393216, 9, -655353, 393216, 9, -655336, 393216, 9, -851985, 393216, 9, 589806, 393216, 9, 917486, 393216, 9, 786424, 393216, 9, 1048571, 393216, 9, -786430, 393216, 9, -262158, 393216, 9)
+
+[node name="TileMap SolarPanels" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_exi56")
+format = 2
+layer_0/tile_data = PackedInt32Array(-917490, 262144, 7, -917489, 262144, 7, -917488, 262144, 7, -786418, 262144, 7, -786417, 262144, 7, -786416, 262144, 7, -917485, 262144, 7, -917484, 262144, 7, -917483, 262144, 7, -786413, 262144, 7, -786412, 262144, 7, -786411, 262144, 7, -917480, 262144, 7, -917479, 262144, 7, -917478, 262144, 7, -786408, 262144, 7, -786407, 262144, 7, -786406, 262144, 7)
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 physics_interpolation_mode = 1
@@ -637,9 +721,91 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="SolarPanel" type="Node2D" parent="."]
+script = ExtResource("20_7nbq1")
+
+[node name="SolarPanel Area" type="Area2D" parent="SolarPanel"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SolarPanel/SolarPanel Area"]
+position = Vector2(328, -200)
+shape = SubResource("RectangleShape2D_iivbl")
+
+[node name="KeyPrompt" type="Sprite2D" parent="SolarPanel"]
+position = Vector2(328, -200)
+texture = ExtResource("17_85qyi")
+region_enabled = true
+region_rect = Rect2(61, 0, 13, 15)
+
+[node name="Window" type="Window" parent="SolarPanel"]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(800, 500)
+
+[node name="Label" type="Label" parent="SolarPanel/Window"]
+offset_right = 799.0
+offset_bottom = 499.0
+text = "These are solar panels that create electricity by harnessing the energy of the sun. These are responsible for providing all of the electricity you are currently using to stay alive. These only come with a few drawbacks. The first is that they are less efficient than they are on Earth. Even though the atmosphere is thinner on Mars, blocking less of the sunlight, Mars is much further from the Sun than Earth. This results in Mars only receiving less than half the sunlight that Earth receives. Don't worry, though! There are enough solar panels here to sustain you and your machines. The second draw back is that due to the seasons on Mars, the power they generate is not always constant, but luckily for you, the base is located near the equator. This allows the solar panels to provide a predictable amount of energy all of the time! Just be sure to check on them once in a while, because dust could cover them, blocking any sunlight from reaching the panels!"
+label_settings = SubResource("LabelSettings_iivbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MOXIEInput" type="Node2D" parent="."]
+script = ExtResource("21_exi56")
+
+[node name="InputArea" type="Area2D" parent="MOXIEInput"]
+collision_mask = 2
+
+[node name="InputCollision" type="CollisionShape2D" parent="MOXIEInput/InputArea"]
+position = Vector2(336, 144)
+shape = SubResource("RectangleShape2D_7nbq1")
+
+[node name="KeyPrompt" type="Sprite2D" parent="MOXIEInput"]
+position = Vector2(336, 116)
+texture = ExtResource("17_85qyi")
+region_enabled = true
+region_rect = Rect2(61, 0, 13, 15)
+
+[node name="Window" type="Window" parent="MOXIEInput"]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(800, 500)
+visible = false
+
+[node name="Label" type="Label" parent="MOXIEInput/Window"]
+offset_right = 799.0
+offset_bottom = 499.0
+text = "This is where the MOXIE draws air in from! It pulls in fresh martian air straight from the source, and due to it's high concentration of carbon dioxide, the MOXIE is able to produce oxygen for you! To learn more about the MOXIE, checkout the machine itself in your base! Be sure to come back here from time to time to check if the filter is covered with Mars dust, or else the MOXIE won't be able to make any oxygen!"
+label_settings = SubResource("LabelSettings_iivbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="IntroText" type="Window" parent="."]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(800, 500)
+
+[node name="Label" type="Label" parent="IntroText"]
+offset_right = 799.0
+offset_bottom = 499.0
+text = "Welcome to Mars astronaut! Here, you can explore and learn about some of the different systems you would need to survive on Mars. In the top right, you will see four different colored bars. The red is for your health, green is for your hunger, yellow is for your energy, and blue is for your oxygen. If your oxygen or hunger bars start to decrease, you will start to lose health! You can refill your oxygen by going into your base that is east of you. Go on and explore your base to learn about all the different components! Don't worry about your oxygen orr hunger depleting while you're reading information, it won't go down! To get started, close this window."
+label_settings = SubResource("LabelSettings_iivbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_oxygen_timer_timeout"]
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="HungerTimer" to="." method="_on_hunger_timer_timeout"]
 [connection signal="body_entered" from="OxyGen/OxygenGenerator" to="OxyGen" method="_on_oxygen_generator_body_entered"]
 [connection signal="body_exited" from="OxyGen/OxygenGenerator" to="OxyGen" method="_on_oxygen_generator_body_exited"]
 [connection signal="close_requested" from="OxyGen/Window" to="OxyGen" method="_on_window_close_requested"]
+[connection signal="body_entered" from="SolarPanel/SolarPanel Area" to="SolarPanel" method="_on_solar_panel_area_body_entered"]
+[connection signal="body_exited" from="SolarPanel/SolarPanel Area" to="SolarPanel" method="_on_solar_panel_area_body_exited"]
+[connection signal="close_requested" from="SolarPanel/Window" to="SolarPanel" method="_on_window_close_requested"]
+[connection signal="body_entered" from="MOXIEInput/InputArea" to="MOXIEInput" method="_on_input_area_body_entered"]
+[connection signal="body_exited" from="MOXIEInput/InputArea" to="MOXIEInput" method="_on_input_area_body_exited"]
+[connection signal="close_requested" from="MOXIEInput/Window" to="MOXIEInput" method="_on_window_close_requested"]
+[connection signal="close_requested" from="IntroText" to="." method="_on_intro_text_close_requested"]
