@@ -1,6 +1,7 @@
 extends Node2D
 var player_in_area = false
 signal stopMove
+signal startStorm
 #func _on_body_entered(body: Node2D) -> void:
 	#print("'E' Collect")
 
@@ -21,6 +22,7 @@ func _on_window_close_requested() -> void:
 	$"../OxygenTimer".start()
 	$"../HungerTimer".start()
 	stopMove.emit()
+	startStorm.emit()
 
 func _on_solar_panel_area_body_entered(body: Node2D) -> void:
 	print("Player in")

@@ -1,6 +1,8 @@
 extends Node2D
 var player_in_area = false
+var visited = false
 signal stopMove
+signal startStorm
 
 func _process(delta: float) -> void:
 	if player_in_area:
@@ -11,7 +13,6 @@ func _process(delta: float) -> void:
 			$"../HungerTimer".stop()
 			stopMove.emit()
 	else:
-		#$Window.hide()
 		$KeyPrompt.hide()
 
 func _on_window_close_requested() -> void:
@@ -19,6 +20,7 @@ func _on_window_close_requested() -> void:
 	$"../OxygenTimer".start()
 	$"../HungerTimer".start()
 	stopMove.emit()
+	startStorm.emit()
 
 func _on_input_area_body_entered(body: Node2D) -> void:
 	print("Player in")

@@ -1,9 +1,7 @@
 res://Scenes/game.tscn
+res://scripts/static_body_2d.gd
 res://Scenes/mars_plant.tscn
 res://Scenes/crate.tscn
 res://Scenes/player.tscn
-res://scripts/solar_panel.gd
-res://scripts/moxie_input.gd
-res://scripts/oxy_gen.gd
-res://scripts/player.gd
 res://scripts/game.gd
+res://scripts/solar_panel.gd

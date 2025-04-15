@@ -1,6 +1,7 @@
 extends Node2D
 var player_in_area = false
 signal stopMove
+signal startStorm
 #func _on_body_entered(body: Node2D) -> void:
 	#print("'E' Collect")
 
@@ -15,15 +16,13 @@ func _process(delta: float) -> void:
 	else:
 		$Window.hide()
 		$KeyPrompt.hide()
-		#if $"../OxygenTimer".is_stopped():
-			#$"../OxygenTimer".start()
-			#$"../HungerTimer".start()
 
 func _on_window_close_requested() -> void:
 	$Window.hide()
 	$"../OxygenTimer".start()
 	$"../HungerTimer".start()
 	stopMove.emit()
+	startStorm.emit()
 
 
 #func _on_pickable_area_body_entered(body: Node2D) -> void:

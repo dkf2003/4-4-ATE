@@ -11,6 +11,10 @@ extends Node2D
 signal oxygenTimer
 signal hungerTimer
 signal stopMove
+var OxyGenVisited = false
+var SolarPanelVisited = false
+var InputVisited = false
+var StormUnlocked = false
 
 func _ready() -> void:
 	player.healthChanged.connect(textureHealthBar.updateHealth)
@@ -23,6 +27,7 @@ func _ready() -> void:
 	stopMove.connect(player.stopMove)
 	oxygenTimer.connect(player.oxygenChange)
 	hungerTimer.connect(player.hungerChange)
+	$IntroText.visible = true
 
 func _on_oxygen_timer_timeout():
 	oxygenTimer.emit(1)
@@ -31,10 +36,22 @@ func _on_hunger_timer_timeout() -> void:
 	hungerTimer.emit(1)
 
 func _process(delta: float) -> void:
-	pass
+	if OxyGenVisited && (SolarPanelVisited && InputVisited):
+		if not StormUnlocked:
+			$Player/Camera2D/StaticBody2D/Timer.start()
+			StormUnlocked = true
 
 func _on_intro_text_close_requested() -> void:
 	$OxygenTimer.start()
 	$HungerTimer.start()
 	stopMove.emit()
 	$IntroText.hide()
+
+func _on_oxy_gen_start_storm() -> void:
+	OxyGenVisited = true
+
+func _on_solar_panel_start_storm() -> void:
+	SolarPanelVisited = true
+
+func _on_moxie_input_start_storm() -> void:
+	InputVisited = true
