@@ -29,3 +29,10 @@ func test_initial_oxygen() -> void:
 func test_oxygen_increment() -> void:
 	player.oxygenChange(1)
 	assert_eq(player.oxygenLevel, 99, "Player should lose 1 oxygen")
+
+func test_player_move() -> void:
+	assert_eq(player.canMove, false, "Player should not be able to move")
+
+func test_timer_stopped() -> void:
+	wait_seconds(2)
+	assert_eq(player.oxygenLevel, 100, "Timer should be stopped, preventing oxygen from going down naturally")

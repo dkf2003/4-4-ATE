@@ -9,8 +9,6 @@ func _process(delta: float) -> void:
 		$KeyPrompt.show()
 		if Input.is_action_just_pressed("e"):
 			$Window.show()
-			$"../OxygenTimer".stop()
-			$"../HungerTimer".stop()
 			stopMove.emit()
 	else:
 		$KeyPrompt.hide()

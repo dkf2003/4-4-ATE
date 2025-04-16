@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=34 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
@@ -8,14 +8,10 @@
 [ext_resource type="AudioStream" uid="uid://ck5nvwqgt0kpy" path="res://assets/space_assets/music/Space - Trim.mp3" id="4_3dryh"]
 [ext_resource type="Texture2D" uid="uid://2sjip85yxxcd" path="res://assets/space_assets/sci-fy3.png" id="4_iivbl"]
 [ext_resource type="Texture2D" uid="uid://dk2tqfln3wu6x" path="res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg" id="4_v158k"]
-[ext_resource type="Script" uid="uid://dhteh02lyx8hu" path="res://scripts/texture_health_bar.gd" id="5_v158k"]
 [ext_resource type="PackedScene" uid="uid://dua3f36i6kxhr" path="res://Scenes/crate.tscn" id="5_wowpa"]
 [ext_resource type="Texture2D" uid="uid://dbpblth3wp4v2" path="res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg" id="6_o5yvi"]
-[ext_resource type="Script" uid="uid://c07p53uy16m1w" path="res://scripts/texture_hunger_bar.gd" id="7_1phco"]
 [ext_resource type="Texture2D" uid="uid://b44g17cggqfbc" path="res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg" id="7_rku1e"]
 [ext_resource type="Texture2D" uid="uid://bro5nglwxgvk3" path="res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg" id="8_rfjv2"]
-[ext_resource type="Script" uid="uid://bgp4f3gnqv38n" path="res://scripts/texture_energy_bar.gd" id="9_nb51f"]
-[ext_resource type="Script" uid="uid://bxvbvc0eb8csi" path="res://scripts/texture_oxygen_bar.gd" id="11_nnt18"]
 [ext_resource type="Texture2D" uid="uid://dxpqveh6dxyue" path="res://assets/other assets/pixil-frame-0(1).png" id="14_7t8sx"]
 [ext_resource type="Script" uid="uid://brg5hlp3s4qxa" path="res://scripts/static_body_2d.gd" id="14_mg4q0"]
 [ext_resource type="Texture2D" uid="uid://dmpbfnl4qtxjg" path="res://assets/space_assets/TileSet v1.0.png" id="15_nb51f"]
@@ -638,7 +634,6 @@ offset_right = 400.0
 offset_bottom = 32.0
 value = 100.0
 texture_progress = ExtResource("4_v158k")
-script = ExtResource("5_v158k")
 
 [node name="TextureHungerBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
 offset_left = 208.0
@@ -647,7 +642,6 @@ offset_right = 400.0
 offset_bottom = 109.0
 value = 100.0
 texture_progress = ExtResource("6_o5yvi")
-script = ExtResource("7_1phco")
 
 [node name="TextureEnergyBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
 offset_left = 208.0
@@ -656,7 +650,6 @@ offset_right = 400.0
 offset_bottom = 189.0
 value = 100.0
 texture_progress = ExtResource("7_rku1e")
-script = ExtResource("9_nb51f")
 
 [node name="TextureOxygenBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
 offset_left = 208.0
@@ -665,7 +658,6 @@ offset_right = 400.0
 offset_bottom = 269.0
 value = 100.0
 texture_progress = ExtResource("8_rfjv2")
-script = ExtResource("11_nnt18")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Player/Camera2D"]
 script = ExtResource("14_mg4q0")
@@ -854,6 +846,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[connection signal="energyChanged" from="Player" to="." method="_on_player_energy_changed"]
+[connection signal="healthChanged" from="Player" to="." method="_on_player_health_changed"]
+[connection signal="hungerChanged" from="Player" to="." method="_on_player_hunger_changed"]
+[connection signal="oxygenChanged" from="Player" to="." method="_on_player_oxygen_changed"]
 [connection signal="timeout" from="Player/Camera2D/StaticBody2D/Timer" to="Player/Camera2D/StaticBody2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_oxygen_timer_timeout"]
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_timer_timeout"]
