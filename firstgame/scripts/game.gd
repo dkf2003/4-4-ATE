@@ -15,11 +15,9 @@ var moxieVisited = false
 var solarPanelVisited = false
 var moxieInputVisited = false
 var StormUnlocked = false
+var inBase = false
 
 func _ready() -> void:
-	moxie.stopMove.connect(stopTimers)
-	moxieInput.stopMove.connect(stopTimers)
-	solarPanel.stopMove.connect(stopTimers)
 	moxie.stopMove.connect(player.stopMove)
 	moxieInput.stopMove.connect(player.stopMove)
 	solarPanel.stopMove.connect(player.stopMove)
@@ -29,7 +27,10 @@ func _ready() -> void:
 	$IntroText.visible = true
 
 func _on_oxygen_timer_timeout():
-	oxygenTimer.emit(1)
+	if inBase:
+		oxygenTimer.emit(-2)
+	else:
+		oxygenTimer.emit(1)
 
 func _on_hunger_timer_timeout() -> void:
 	hungerTimer.emit(1)
@@ -37,7 +38,7 @@ func _on_hunger_timer_timeout() -> void:
 func _process(delta: float) -> void:
 	if moxieVisited && (solarPanelVisited && moxieInputVisited):
 		if not StormUnlocked:
-			$Player/Camera2D/StaticBody2D/Timer.start()
+			$Player/Camera2D/StaticBody2D/AlertTimer.start()
 			StormUnlocked = true
 
 func _on_intro_text_close_requested() -> void:
@@ -45,10 +46,6 @@ func _on_intro_text_close_requested() -> void:
 	$HungerTimer.start()
 	stopMove.emit()
 	$IntroText.hide()
-	
-func stopTimers() -> void:
-	$OxygenTimer.stop()
-	$HungerTimer.stop()
 
 func _on_oxy_gen_start_storm() -> void:
 	moxieVisited = true
@@ -70,3 +67,19 @@ func _on_player_hunger_changed(hunger:int) -> void:
 
 func _on_player_oxygen_changed(oxygen:int) -> void:
 	textureOxygenBar.value = oxygen
+
+func _on_base_area_body_entered(body: Node2D) -> void:
+	inBase = true
+
+func _on_base_area_body_exited(body: Node2D) -> void:
+	inBase = false
+
+func _on_storm_damage_timer_timeout() -> void:
+	if not inBase:
+		player.healthChange(3)
+
+func _on_static_body_2d_dust_storm() -> void:
+	if $StormDamageTimer.is_stopped():
+		$StormDamageTimer.start()
+	else:
+		$StormDamageTimer.stop()

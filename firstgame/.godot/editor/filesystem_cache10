@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744765303
+::res://::1744832253
 default_bus_layout.tres::AudioBusLayout/AudioBusLayout::6524643339731165841::1743275315::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile/TextFile::-1::1744758667::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4463799550838549381::1741549509::1744245907::1::::<><><>0<>0<>b51bd4f8b40cb8b6dae1fba1f8cc0790<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -1494,7 +1494,8 @@ slide_vertical_grey_section_wide.svg::CompressedTexture2D/CompressedTexture2D::5
 star.svg::CompressedTexture2D/CompressedTexture2D::1779056879651189560::1744245940::1744245940::1::::<><><>0<>0<>0aa7c38fc8820c4cef1f2bde95153f00<>res://.godot/imported/star.svg-48aa3e55cff231a672fb39b338793f73.ctex::
 star_outline.svg::CompressedTexture2D/CompressedTexture2D::3399561843816714079::1744245940::1744245940::1::::<><><>0<>0<>646a1ee030f32e3ded1341de02548138<>res://.godot/imported/star_outline.svg-db223fe2f5dba0835888b95e6adcb9d7.ctex::
 star_outline_depth.svg::CompressedTexture2D/CompressedTexture2D::5599904268487508884::1744245940::1744245940::1::::<><><>0<>0<>b6f08a8a5f52ae41a92dc308cd8ed0e1<>res://.godot/imported/star_outline_depth.svg-2276dab347a3a542c762c33aa17d7bd9.ctex::
-::res://assets/other assets/::1744760134
+::res://assets/other assets/::1744836883
+free_accesories.png::CompressedTexture2D::7413954127255001358::1744836865::1744836886::1::::<><><>0<>0<>e01fc294aae4ae886449ff0715fd1332<>res://.godot/imported/free_accesories.png-8ba814d33808dda9e531fea4404fdd05.ctex::
 Heart.png::CompressedTexture2D/CompressedTexture2D::8800809895379128437::1744245940::1744245940::1::::<><><>0<>0<>c09eb0c7396f5e44e80136a0ae56608a<>res://.godot/imported/Heart.png-cc9dd0478a5b85a127ee506ed5b3b13f.ctex::
 Keys.png::CompressedTexture2D/CompressedTexture2D::5403964133688514295::1744246255::1744246255::1::::<><><>0<>0<>32612a7d5db781fb3e4581f1605303ad<>res://.godot/imported/Keys.png-1894e5fc7a89d5b1a60b0e1ac4fc3707.ctex::
 pixil-frame-0(1).png::CompressedTexture2D/CompressedTexture2D::8805580316941681940::1744756367::1744756367::1::::<><><>0<>0<>14fea6a597f4a8a8f2a2ca029d5a114f<>res://.godot/imported/pixil-frame-0(1).png-8f53c9648c2a0be166f67d73de94d60b.ctex::
@@ -1510,20 +1511,20 @@ sci-fy3.png::CompressedTexture2D/CompressedTexture2D::1932819157310951003::17444
 TileSet v1.0.png::CompressedTexture2D/CompressedTexture2D::8032564188145062156::1744246255::1744246255::1::::<><><>0<>0<>c89b6313c7a8d609ea8f63513f1591b4<>res://.godot/imported/TileSet v1.0.png-5218b5a30d261eecc854b36a0da2dc5e.ctex::
 ::res://assets/space_assets/music/::1744245906
 Space - Trim.mp3::AudioStreamMP3/AudioStreamMP3::5537489139495857526::1743275315::1744245906::1::::<><><>0<>0<>1456fdb5032792322d4b8d035f91f341<>res://.godot/imported/Space - Trim.mp3-122f33cf8d9a866f0b34a374a34228aa.mp3str::
-::res://Scenes/::1744764692
-crate.tscn::PackedScene::8564749447555006939::1744764692::0::1::::<><><>0<>0<><>::uid://ebx56146dg7c::::res://scripts/crate.gd<>uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png
-game.tscn::PackedScene::2349415308323318932::1744764692::0::1::::<><><>0<>0<><>::uid://c6bww8w3j6yl1::::res://Scenes/player.tscn<>uid://6jxpt4vx57b8::::res://scripts/game.gd<>uid://byyk6ymw0yrfk::::res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/Terrain.png<>uid://cfvmlcunugxkp::::res://assets/other assets/Tileset_Mars.png<>uid://cw2bfydgl7sqx::::res://Scenes/mars_plant.tscn<>uid://ck5nvwqgt0kpy::::res://assets/space_assets/music/Space - Trim.mp3<>uid://2sjip85yxxcd::::res://assets/space_assets/sci-fy3.png<>uid://dk2tqfln3wu6x::::res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg<>uid://dua3f36i6kxhr::::res://Scenes/crate.tscn<>uid://dbpblth3wp4v2::::res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg<>uid://b44g17cggqfbc::::res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg<>uid://bro5nglwxgvk3::::res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg<>uid://dxpqveh6dxyue::::res://assets/other assets/pixil-frame-0(1).png<>uid://brg5hlp3s4qxa::::res://scripts/static_body_2d.gd<>uid://dmpbfnl4qtxjg::::res://assets/space_assets/TileSet v1.0.png<>uid://rn6b2n16euc1::::res://scripts/oxy_gen.gd<>uid://ci8yq8yjw1fl4::::res://assets/other assets/Keys.png<>uid://6vefpkhfcxpr::::res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf<>uid://c4480k2osyi6v::::res://scripts/solar_panel.gd<>uid://buihw5bifsth1::::res://scripts/moxie_input.gd
-mars_plant.tscn::PackedScene::6372805038228227503::1744764692::0::1::::<><><>0<>0<><>::uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png<>uid://d23qio0yq6gkh::::res://scripts/mars_plant.gd
-player.tscn::PackedScene::6952136727767753080::1744764692::0::1::::<><><>0<>0<><>::uid://b7vbwpw87fjn2::::res://scripts/player.gd<>uid://bltybyi5har1::::res://assets/Alice Work/Drawing 3 (1).png
-::res://scripts/::1744764637
+::res://Scenes/::1744836437
+crate.tscn::PackedScene::8564749447555006939::1744836312::0::1::::<><><>0<>0<><>::uid://ebx56146dg7c::::res://scripts/crate.gd<>uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png
+game.tscn::PackedScene::2349415308323318932::1744836437::0::1::::<><><>0<>0<><>::uid://c6bww8w3j6yl1::::res://Scenes/player.tscn<>uid://6jxpt4vx57b8::::res://scripts/game.gd<>uid://byyk6ymw0yrfk::::res://assets/RPG Adventure - Free Pack/RPG Adventure - Free Pack/Terrain.png<>uid://cfvmlcunugxkp::::res://assets/other assets/Tileset_Mars.png<>uid://cw2bfydgl7sqx::::res://Scenes/mars_plant.tscn<>uid://ck5nvwqgt0kpy::::res://assets/space_assets/music/Space - Trim.mp3<>uid://2sjip85yxxcd::::res://assets/space_assets/sci-fy3.png<>uid://dk2tqfln3wu6x::::res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg<>uid://dua3f36i6kxhr::::res://Scenes/crate.tscn<>uid://dbpblth3wp4v2::::res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg<>uid://b44g17cggqfbc::::res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg<>uid://bro5nglwxgvk3::::res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg<>uid://dxpqveh6dxyue::::res://assets/other assets/pixil-frame-0(1).png<>uid://brg5hlp3s4qxa::::res://scripts/static_body_2d.gd<>uid://dmpbfnl4qtxjg::::res://assets/space_assets/TileSet v1.0.png<>uid://rn6b2n16euc1::::res://scripts/oxy_gen.gd<>uid://ci8yq8yjw1fl4::::res://assets/other assets/Keys.png<>uid://6vefpkhfcxpr::::res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf<>uid://c4480k2osyi6v::::res://scripts/solar_panel.gd<>uid://buihw5bifsth1::::res://scripts/moxie_input.gd
+mars_plant.tscn::PackedScene::6372805038228227503::1744836312::0::1::::<><><>0<>0<><>::uid://ddt1drpyp084c::::res://assets/brackeys_platformer_assets/sprites/world_tileset.png<>uid://d23qio0yq6gkh::::res://scripts/mars_plant.gd
+player.tscn::PackedScene::6952136727767753080::1744836312::0::1::::<><><>0<>0<><>::uid://b7vbwpw87fjn2::::res://scripts/player.gd<>uid://bltybyi5har1::::res://assets/Alice Work/Drawing 3 (1).png
+::res://scripts/::1744836306
 crate.gd::GDScript/GDScript::284271486704913794::1743276066::0::1::::<>Node2D<><>0<>0<><>::
-game.gd::GDScript::2195857874036820611::1744762166::0::1::::<>Node2D<><>0<>0<><>::
+game.gd::GDScript::2195857874036820611::1744834342::0::1::::<>Node2D<><>0<>0<><>::
 mars_plant.gd::GDScript/GDScript::9113149939715423531::1743275315::0::1::::<>Area2D<><>0<>0<><>::
-moxie_input.gd::GDScript/GDScript::3807178462517703412::1744757643::0::1::::<>Node2D<><>0<>0<><>::
-oxy_gen.gd::GDScript::1221932704654832062::1744764637::0::1::::<>Node2D<><>0<>0<><>::
+moxie_input.gd::GDScript::3807178462517703412::1744835189::0::1::::<>Node2D<><>0<>0<><>::
+oxy_gen.gd::GDScript::1221932704654832062::1744835189::0::1::::<>Node2D<><>0<>0<><>::
 player.gd::GDScript/GDScript::4675916440782355265::1744429202::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
-solar_panel.gd::GDScript::6870233660970114739::1744760931::0::1::::<>Node2D<><>0<>0<><>::
-static_body_2d.gd::GDScript::3593851904630661270::1744760235::0::1::::<>StaticBody2D<><>0<>0<><>::
+solar_panel.gd::GDScript::6870233660970114739::1744835189::0::1::::<>Node2D<><>0<>0<><>::
+static_body_2d.gd::GDScript::3593851904630661270::1744836306::0::1::::<>StaticBody2D<><>0<>0<><>::
 texture_oxygen_bar.gd::GDScript/GDScript::4044214382719059148::1743622099::0::1::::<>TextureProgressBar<><>0<>0<><>::
-::res://test/::1744764688
-test_player.gd::GDScript::2644475096054980794::1744764688::0::1::::<>GutTest<><>0<>0<><>::
+::res://test/::1744765923
+test_player.gd::GDScript::2644475096054980794::1744765923::0::1::::<>GutTest<><>0<>0<><>::

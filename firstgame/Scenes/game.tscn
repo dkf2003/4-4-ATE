@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=39 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://2sjip85yxxcd" path="res://assets/space_assets/sci-fy3.png" id="4_iivbl"]
 [ext_resource type="Texture2D" uid="uid://dk2tqfln3wu6x" path="res://assets/kenney_ui-pack/Vector/Red/button_rectangle_depth_flat.svg" id="4_v158k"]
 [ext_resource type="PackedScene" uid="uid://dua3f36i6kxhr" path="res://Scenes/crate.tscn" id="5_wowpa"]
+[ext_resource type="Texture2D" uid="uid://ddvm0g6oaj8fy" path="res://assets/other assets/free_accesories.png" id="6_exi56"]
 [ext_resource type="Texture2D" uid="uid://dbpblth3wp4v2" path="res://assets/kenney_ui-pack/Vector/Green/button_rectangle_flat.svg" id="6_o5yvi"]
 [ext_resource type="Texture2D" uid="uid://b44g17cggqfbc" path="res://assets/kenney_ui-pack/Vector/Yellow/button_rectangle_flat.svg" id="7_rku1e"]
 [ext_resource type="Texture2D" uid="uid://bro5nglwxgvk3" path="res://assets/kenney_ui-pack/Vector/Blue/button_rectangle_flat.svg" id="8_rfjv2"]
@@ -564,6 +565,240 @@ texture = ExtResource("4_iivbl")
 [sub_resource type="TileSet" id="TileSet_exi56"]
 sources/0 = SubResource("TileSetAtlasSource_7nbq1")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7t8sx"]
+texture = ExtResource("6_exi56")
+texture_region_size = Vector2i(17, 19)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+4:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+10:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+0:24/0 = 0
+1:24/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+4:24/0 = 0
+5:24/0 = 0
+6:24/0 = 0
+7:24/0 = 0
+0:25/0 = 0
+1:25/0 = 0
+2:25/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+6:25/0 = 0
+7:25/0 = 0
+0:26/0 = 0
+1:26/0 = 0
+2:26/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+6:26/0 = 0
+7:26/0 = 0
+0:27/0 = 0
+1:27/0 = 0
+2:27/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mg4q0"]
+sources/0 = SubResource("TileSetAtlasSource_7t8sx")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mg4q0"]
 lifetime_randomness = 0.5
 particle_flag_disable_z = true
@@ -572,24 +807,31 @@ emission_box_extents = Vector3(600, 350, 1)
 initial_velocity_min = 350.57
 initial_velocity_max = 350.57
 gravity = Vector3(98, 0, 0)
+collision_mode = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_mg4q0"]
 font = ExtResource("18_85qyi")
 font_size = 8
 font_color = Color(0, 1, 1, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb51f"]
-size = Vector2(32, 32)
-
 [sub_resource type="LabelSettings" id="LabelSettings_iivbl"]
 line_spacing = 8.0
 font = ExtResource("18_85qyi")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb51f"]
+size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iivbl"]
 size = Vector2(210, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
 size = Vector2(34, 34)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7nbq1"]
+polygon = PackedVector2Array(100, 7, 100, 200, 324, 200, 324, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg4q0"]
+size = Vector2(224, 192)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_v158k")
@@ -614,6 +856,11 @@ layer_0/tile_data = PackedInt32Array(458743, 524288, 8, 262148, 524288, 8, -1966
 tile_set = SubResource("TileSet_exi56")
 format = 2
 layer_0/tile_data = PackedInt32Array(-917490, 262144, 7, -917489, 262144, 7, -917488, 262144, 7, -786418, 262144, 7, -786417, 262144, 7, -786416, 262144, 7, -917485, 262144, 7, -917484, 262144, 7, -917483, 262144, 7, -786413, 262144, 7, -786412, 262144, 7, -786411, 262144, 7, -917480, 262144, 7, -917479, 262144, 7, -917478, 262144, 7, -786408, 262144, 7, -786407, 262144, 7, -786406, 262144, 7)
+
+[node name="TileMap Accessories" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mg4q0")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327662, 0, 16, -262126, 0, 17, -327661, 65536, 16, -262125, 65536, 17, -327660, 131072, 16, -262124, 131072, 17, -327659, 196608, 16, -262123, 196608, 17)
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 physics_interpolation_mode = 1
@@ -663,10 +910,9 @@ texture_progress = ExtResource("8_rfjv2")
 script = ExtResource("14_mg4q0")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Player/Camera2D/StaticBody2D"]
-visible = false
-color = Color(1, 0.580392, 0.482353, 1)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Player/Camera2D/StaticBody2D"]
+emitting = false
 amount = 12800
 texture = ExtResource("14_7t8sx")
 lifetime = 2.0
@@ -674,8 +920,13 @@ trail_enabled = true
 trail_lifetime = 0.15
 process_material = SubResource("ParticleProcessMaterial_mg4q0")
 
-[node name="Timer" type="Timer" parent="Player/Camera2D/StaticBody2D"]
+[node name="StormTimer" type="Timer" parent="Player/Camera2D/StaticBody2D"]
 wait_time = 5.0
+one_shot = true
+
+[node name="AlertTimer" type="Timer" parent="Player/Camera2D/StaticBody2D"]
+wait_time = 5.0
+one_shot = true
 
 [node name="ColorRect" type="ColorRect" parent="Player/Camera2D/StaticBody2D"]
 modulate = Color(0.501961, 0, 0, 1)
@@ -693,6 +944,21 @@ offset_bottom = 27.0
 text = "Alert"
 label_settings = SubResource("LabelSettings_mg4q0")
 
+[node name="DustStormInfo" type="Window" parent="Player/Camera2D/StaticBody2D"]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(800, 500)
+visible = false
+
+[node name="Label" type="Label" parent="Player/Camera2D/StaticBody2D/DustStormInfo"]
+offset_right = 799.0
+offset_bottom = 499.0
+text = "Welcome to your first Mars dust storm astronaut! This will be the only time you get this warning so read carefully! The danger of dust storms is not the wind, only the dust itself. This is because the atmosphere on Mars is so thin that the wind itself does not have enough power to destroy your equipment. In fact, the Martian atmosphere is only about 1% as dense as the Earth's atmosphere! On top of this, winds during dust storms on Mars only have an estimated maximum of 60 miles per hour, which is not very fast compared to Earth standards. However, the wind does have enough power to pick up the dust sitting on the surface. This is a problem because the dust particles are extremely small and electrostatic. This means that they stick to everything, like how styrofoam does. The dust is also very gritty, which can cause damage to moving parts. It can cause some of your equipment, such as your solar panels and MOXIE, to be non-operational, so be sure to clean off the dust from your equipment after storms! During the storm, take shelter in your base to prevent yourself from being harmed by the dust! For future storms, you can tell that a storm is going to occur soon by seeing the red alert in the top left of your screen. Good luck!"
+label_settings = SubResource("LabelSettings_iivbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_3dryh")
 autoplay = true
@@ -701,39 +967,51 @@ bus = &"Music"
 [node name="Plants" type="Node" parent="."]
 
 [node name="Mars Plant" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(168, -7)
 
 [node name="Mars Plant2" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(-140, 13)
 
 [node name="Mars Plant3" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(58, -50)
 
 [node name="Mars Plant4" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(1, 184)
 
 [node name="Mars Plant5" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(145, 90)
 
 [node name="Mars Plant6" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(-44, -53)
 
 [node name="Mars Plant7" parent="Plants" instance=ExtResource("3_wrm1d")]
+visible = false
 position = Vector2(-6, 72)
 
 [node name="crates" type="Node" parent="."]
 
 [node name="crate" parent="crates" instance=ExtResource("5_wowpa")]
+visible = false
 position = Vector2(52, 27)
 
 [node name="crate2" parent="crates" instance=ExtResource("5_wowpa")]
+visible = false
 position = Vector2(-84, 10)
 
 [node name="crate3" parent="crates" instance=ExtResource("5_wowpa")]
+visible = false
 position = Vector2(106, -13)
 
 [node name="OxygenTimer" type="Timer" parent="."]
 process_callback = 0
+
+[node name="StormDamageTimer" type="Timer" parent="."]
 
 [node name="HungerTimer" type="Timer" parent="."]
 process_callback = 0
@@ -846,13 +1124,32 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+position = Vector2(108, -103)
+occluder = SubResource("OccluderPolygon2D_7nbq1")
+occluder_light_mask = 0
+
+[node name="BaseArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
+position = Vector2(320, 0)
+shape = SubResource("RectangleShape2D_mg4q0")
+
 [connection signal="energyChanged" from="Player" to="." method="_on_player_energy_changed"]
 [connection signal="healthChanged" from="Player" to="." method="_on_player_health_changed"]
 [connection signal="hungerChanged" from="Player" to="." method="_on_player_hunger_changed"]
 [connection signal="oxygenChanged" from="Player" to="." method="_on_player_oxygen_changed"]
-[connection signal="timeout" from="Player/Camera2D/StaticBody2D/Timer" to="Player/Camera2D/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="dustStorm" from="Player/Camera2D/StaticBody2D" to="." method="_on_static_body_2d_dust_storm"]
+[connection signal="dustStorm" from="Player/Camera2D/StaticBody2D" to="SolarPanel" method="_on_static_body_2d_dust_storm"]
+[connection signal="dustStorm" from="Player/Camera2D/StaticBody2D" to="MOXIEInput" method="_on_static_body_2d_dust_storm"]
+[connection signal="timeout" from="Player/Camera2D/StaticBody2D/StormTimer" to="Player/Camera2D/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Player/Camera2D/StaticBody2D/AlertTimer" to="Player/Camera2D/StaticBody2D" method="_on_alert_timer_timeout"]
+[connection signal="close_requested" from="Player/Camera2D/StaticBody2D/DustStormInfo" to="Player/Camera2D/StaticBody2D" method="_on_dust_storm_info_close_requested"]
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_oxygen_timer_timeout"]
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="StormDamageTimer" to="." method="_on_storm_damage_timer_timeout"]
 [connection signal="timeout" from="HungerTimer" to="." method="_on_hunger_timer_timeout"]
 [connection signal="startStorm" from="OxyGen" to="." method="_on_oxy_gen_start_storm"]
 [connection signal="body_entered" from="OxyGen/OxygenGenerator" to="OxyGen" method="_on_oxygen_generator_body_entered"]
@@ -867,3 +1164,5 @@ autowrap_mode = 2
 [connection signal="body_exited" from="MOXIEInput/InputArea" to="MOXIEInput" method="_on_input_area_body_exited"]
 [connection signal="close_requested" from="MOXIEInput/Window" to="MOXIEInput" method="_on_window_close_requested"]
 [connection signal="close_requested" from="IntroText" to="." method="_on_intro_text_close_requested"]
+[connection signal="body_entered" from="BaseArea" to="." method="_on_base_area_body_entered"]
+[connection signal="body_exited" from="BaseArea" to="." method="_on_base_area_body_exited"]

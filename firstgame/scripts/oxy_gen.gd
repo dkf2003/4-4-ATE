@@ -10,6 +10,8 @@ func _process(delta: float) -> void:
 	if player_in_area:
 		$KeyPrompt.show()
 		if Input.is_action_just_pressed("e"):
+			$"../OxygenTimer".stop()
+			$"../HungerTimer".stop()
 			$Window.show()
 			stopMove.emit()
 	else:
@@ -36,12 +38,10 @@ func _on_window_close_requested() -> void:
 
 
 func _on_oxygen_generator_body_entered(body: Node2D) -> void:
-	print("Player in")
 	if body.has_method("player"):
 		player_in_area = true
 
 
 func _on_oxygen_generator_body_exited(body: Node2D) -> void:
-	print("Player left")
 	if body.has_method("player"):
 		player_in_area = false
