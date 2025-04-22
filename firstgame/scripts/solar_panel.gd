@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 				$Window.show()
 				stopMove.emit()
 			else:
+				$ColorRect.visible = true
 				isFunctional = true
 	elif isFunctional:
 		$Window.hide()
@@ -38,6 +39,7 @@ func _on_solar_panel_area_body_entered(body: Node2D) -> void:
 
 func _on_solar_panel_area_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
+		$ColorRect.visible = false
 		player_in_area = false
 
 func _on_static_body_2d_dust_storm() -> void:

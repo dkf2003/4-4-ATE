@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var textureHealthBar = $Player/Camera2D/Node2D/TextureHealthBar
-@onready var textureEnergyBar = $Player/Camera2D/Node2D/TextureEnergyBar
-@onready var textureOxygenBar = $Player/Camera2D/Node2D/TextureOxygenBar
-@onready var textureHungerBar = $Player/Camera2D/Node2D/TextureHungerBar
+@onready var textureHealthBar = $Player/Camera2D/CanvasLayer/TextureHealthBar
+@onready var textureEnergyBar = $Player/Camera2D/CanvasLayer/TextureEnergyBar
+@onready var textureOxygenBar = $Player/Camera2D/CanvasLayer/TextureOxygenBar
+@onready var textureHungerBar = $Player/Camera2D/CanvasLayer/TextureHungerBar
 @onready var player = $Player
 @onready var moxie = $OxyGen
 @onready var moxieInput = $MOXIEInput
@@ -16,7 +16,7 @@ var solarPanelVisited = false
 var moxieInputVisited = false
 var StormUnlocked = false
 var inBase = false
-
+var visitedBase = false
 func _ready() -> void:
 	moxie.stopMove.connect(player.stopMove)
 	moxieInput.stopMove.connect(player.stopMove)
@@ -24,7 +24,11 @@ func _ready() -> void:
 	stopMove.connect(player.stopMove)
 	oxygenTimer.connect(player.oxygenChange)
 	hungerTimer.connect(player.hungerChange)
+	$Player/Camera2D/CanvasLayer.visible = true
+	$SolarPanel/ColorRect.visible = false
+	$MOXIEInput/ColorRect.visible = false
 	$IntroText.visible = true
+	$BaseIntroText.hide()
 
 func _on_oxygen_timer_timeout():
 	if inBase:
@@ -57,6 +61,7 @@ func _on_moxie_input_start_storm() -> void:
 	moxieInputVisited = true
 
 func _on_player_health_changed(health:int) -> void:
+	print(health)
 	textureHealthBar.value = health
 
 func _on_player_energy_changed(energy:int) -> void:
@@ -69,12 +74,17 @@ func _on_player_oxygen_changed(oxygen:int) -> void:
 	textureOxygenBar.value = oxygen
 
 func _on_base_area_body_entered(body: Node2D) -> void:
+	if not visitedBase:
+		$BaseIntroText.show()
+		stopMove.emit()
+		visitedBase = true
 	inBase = true
 
 func _on_base_area_body_exited(body: Node2D) -> void:
 	inBase = false
 
 func _on_storm_damage_timer_timeout() -> void:
+	print('storm damage timer')
 	if not inBase:
 		player.healthChange(3)
 
@@ -83,3 +93,9 @@ func _on_static_body_2d_dust_storm() -> void:
 		$StormDamageTimer.start()
 	else:
 		$StormDamageTimer.stop()
+
+func _on_base_intro_text_close_requested() -> void:
+	$OxygenTimer.start()
+	$HungerTimer.start()
+	stopMove.emit()
+	$BaseIntroText.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=61 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://6vefpkhfcxpr" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="18_85qyi"]
 [ext_resource type="Script" uid="uid://c4480k2osyi6v" path="res://scripts/solar_panel.gd" id="20_7nbq1"]
 [ext_resource type="Script" uid="uid://buihw5bifsth1" path="res://scripts/moxie_input.gd" id="21_exi56"]
+[ext_resource type="Texture2D" uid="uid://binaloxsmmif4" path="res://assets/plants/sprite_sheet(1).png" id="22_7t8sx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l0tm"]
 texture = ExtResource("2_i6g32")
@@ -799,7 +800,7 @@ texture_region_size = Vector2i(17, 19)
 [sub_resource type="TileSet" id="TileSet_mg4q0"]
 sources/0 = SubResource("TileSetAtlasSource_7t8sx")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mg4q0"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_exi56"]
 lifetime_randomness = 0.5
 particle_flag_disable_z = true
 emission_shape = 3
@@ -809,20 +810,29 @@ initial_velocity_max = 350.57
 gravity = Vector3(98, 0, 0)
 collision_mode = 2
 
-[sub_resource type="LabelSettings" id="LabelSettings_mg4q0"]
+[sub_resource type="LabelSettings" id="LabelSettings_7t8sx"]
 font = ExtResource("18_85qyi")
 font_size = 8
 font_color = Color(0, 1, 1, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_iivbl"]
+[sub_resource type="LabelSettings" id="LabelSettings_vm72l"]
 line_spacing = 8.0
 font = ExtResource("18_85qyi")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nb51f"]
 size = Vector2(32, 32)
 
+[sub_resource type="LabelSettings" id="LabelSettings_iivbl"]
+line_spacing = 8.0
+font = ExtResource("18_85qyi")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iivbl"]
 size = Vector2(210, 50)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mg4q0"]
+font = ExtResource("18_85qyi")
+font_size = 8
+font_color = Color(0, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
 size = Vector2(34, 34)
@@ -831,10 +841,138 @@ size = Vector2(34, 34)
 polygon = PackedVector2Array(100, 7, 100, 200, 324, 200, 324, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mg4q0"]
-size = Vector2(224, 192)
+size = Vector2(224, 353)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exi56"]
+size = Vector2(20, 555)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7t8sx"]
+size = Vector2(947, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t8sx"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg4q0"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm72l"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22asu"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkdbe"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81klo"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgy6u"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwurv"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mucmn"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m3t6"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ese38"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeip8"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe308"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3cha"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i26dy"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmoi6"]
+atlas = ExtResource("22_7t8sx")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6uxt2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t8sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg4q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm72l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22asu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkdbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81klo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgy6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwurv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mucmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8m3t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ese38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oeip8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xe308")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3cha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i26dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmoi6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_v158k")
+metadata/_edit_horizontal_guides_ = [-256.0, 272.0]
+metadata/_edit_vertical_guides_ = [-416.0, 449.0]
 
 [node name="TileMap Ground" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_v158k")
@@ -845,12 +983,12 @@ layer_0/tile_data = PackedInt32Array(-983066, 1, 0, -917530, 1, 0, -851994, 1, 0
 tile_set = SubResource("TileSet_ewbju")
 rendering_quadrant_size = 8
 format = 2
-layer_0/tile_data = PackedInt32Array(-393203, 0, 0, -393202, 65536, 0, -393201, 131072, 0, -393200, 196608, 0, -393199, 131072, 0, -393198, 196608, 0, -393197, 131072, 0, -393196, 196608, 0, -393195, 131072, 0, -393194, 196608, 0, -393193, 131072, 0, -393192, 196608, 0, -393191, 262144, 0, -327667, 0, 1, -327666, 65536, 1, -327665, 131072, 1, -327664, 196608, 1, -327663, 131072, 1, -327662, 196608, 1, -327661, 131072, 1, -327660, 196608, 1, -327659, 131072, 1, -327658, 196608, 1, -327657, 131072, 1, -327656, 196608, 1, -327655, 262144, 1, -393190, 327680, 0, -327654, 327680, 1, -262119, 262144, 2, -196583, 262144, 3, -262118, 327680, 2, -196582, 327680, 3, -131047, 262144, 2, -65511, 262144, 3, -131046, 327680, 2, -65510, 327680, 3, 25, 262144, 2, 65561, 262144, 3, 26, 327680, 2, 65562, 327680, 3, 131097, 262144, 2, 196633, 262144, 3, 131098, 327680, 2, 196634, 327680, 3, 262169, 262144, 4, 327705, 262144, 5, 262170, 327680, 4, 327706, 327680, 5, 262167, 131072, 4, 327703, 131072, 5, 262168, 196608, 4, 327704, 196608, 5, 262165, 131072, 4, 327701, 131072, 5, 262166, 196608, 4, 327702, 196608, 5, 262163, 131072, 4, 327699, 131072, 5, 262164, 196608, 4, 327700, 196608, 5, 262161, 131072, 4, 327697, 131072, 5, 262162, 196608, 4, 327698, 196608, 5, 262159, 131072, 4, 327695, 131072, 5, 262160, 196608, 4, 327696, 196608, 5, 262157, 0, 4, 327693, 0, 5, 262158, 65536, 4, 327694, 65536, 5, -262131, 0, 2, -196595, 0, 3, -262130, 65536, 2, -196594, 65536, 3, -131059, 0, 2, -65523, 0, 3, -131058, 65536, 2, -65522, 65536, 3, 13, 0, 2, 65549, 0, 3, 14, 65536, 2, 65550, 65536, 3, 131085, 0, 2, 196621, 0, 3, 131086, 65536, 2, 196622, 65536, 3, -262129, 131072, 2, -196593, 131072, 3, -262128, 196608, 2, -196592, 196608, 3, -131057, 131072, 2, -65521, 131072, 3, -131056, 196608, 2, -65520, 196608, 3, -131055, 131072, 2, -65519, 131072, 3, -131054, 196608, 2, -65518, 196608, 3, -131053, 131072, 2, -65517, 131072, 3, -131052, 196608, 2, -65516, 196608, 3, -262127, 131072, 2, -196591, 131072, 3, -262126, 196608, 2, -196590, 196608, 3, -262125, 131072, 2, -196589, 131072, 3, -262124, 196608, 2, -196588, 196608, 3, -262123, 131072, 2, -196587, 131072, 3, -262122, 196608, 2, -196586, 196608, 3, -262121, 131072, 2, -196585, 131072, 3, -262120, 196608, 2, -196584, 196608, 3, -131049, 131072, 2, -65513, 131072, 3, -131048, 196608, 2, -65512, 196608, 3, -131051, 131072, 2, -65515, 131072, 3, -131050, 196608, 2, -65514, 196608, 3, 21, 131072, 2, 65557, 131072, 3, 22, 196608, 2, 65558, 196608, 3, 23, 131072, 2, 65559, 131072, 3, 24, 196608, 2, 65560, 196608, 3, 131093, 131072, 2, 196629, 131072, 3, 131094, 196608, 2, 196630, 196608, 3, 131095, 262144, 6, 196631, 262144, 7, 131096, 327680, 6, 196632, 327680, 7, 131091, 131072, 2, 196627, 131072, 3, 131092, 196608, 2, 196628, 196608, 3, 19, 131072, 2, 65555, 131072, 3, 20, 196608, 2, 65556, 196608, 3, 17, 131072, 2, 65553, 131072, 3, 18, 196608, 2, 65554, 196608, 3, 131089, 131072, 2, 196625, 131072, 3, 131090, 196608, 2, 196626, 196608, 3, 131087, 131072, 2, 196623, 131072, 3, 131088, 196608, 2, 196624, 196608, 3, 15, 131072, 2, 65551, 131072, 3, 16, 196608, 2, 65552, 196608, 3, 524308, 0, 6, 589844, 0, 7, 524309, 65536, 6, 589845, 65536, 7)
+layer_0/tile_data = PackedInt32Array(-393203, 0, 0, -393202, 65536, 0, -393201, 131072, 0, -393200, 196608, 0, -393199, 131072, 0, -393198, 196608, 0, -393197, 131072, 0, -393196, 196608, 0, -393195, 131072, 0, -393194, 196608, 0, -393193, 131072, 0, -393192, 196608, 0, -393191, 262144, 0, -327667, 0, 1, -327666, 65536, 1, -327665, 131072, 1, -327664, 196608, 1, -327663, 131072, 1, -327662, 196608, 1, -327661, 131072, 1, -327660, 196608, 1, -327659, 131072, 1, -327658, 196608, 1, -327657, 131072, 1, -327656, 196608, 1, -327655, 262144, 1, -393190, 327680, 0, -327654, 327680, 1, -262119, 262144, 2, -196583, 262144, 3, -262118, 327680, 2, -196582, 327680, 3, -131047, 262144, 2, -65511, 262144, 3, -131046, 327680, 2, -65510, 327680, 3, 25, 262144, 2, 65561, 262144, 3, 26, 327680, 2, 65562, 327680, 3, 131097, 262144, 2, 196633, 262144, 3, 131098, 327680, 2, 196634, 327680, 3, -262131, 0, 2, -196595, 0, 3, -262130, 65536, 2, -196594, 65536, 3, -131059, 0, 2, -65523, 0, 3, -131058, 65536, 2, -65522, 65536, 3, 13, 0, 2, 65549, 0, 3, 14, 65536, 2, 65550, 65536, 3, 131085, 0, 2, 196621, 0, 3, 131086, 65536, 2, 196622, 65536, 3, -262129, 131072, 2, -196593, 131072, 3, -262128, 196608, 2, -196592, 196608, 3, -131057, 131072, 2, -65521, 131072, 3, -131056, 196608, 2, -65520, 196608, 3, -131055, 131072, 2, -65519, 131072, 3, -131054, 196608, 2, -65518, 196608, 3, -131053, 131072, 2, -65517, 131072, 3, -131052, 196608, 2, -65516, 196608, 3, -262127, 131072, 2, -196591, 131072, 3, -262126, 196608, 2, -196590, 196608, 3, -262125, 131072, 2, -196589, 131072, 3, -262124, 196608, 2, -196588, 196608, 3, -262123, 131072, 2, -196587, 131072, 3, -262122, 196608, 2, -196586, 196608, 3, -262121, 131072, 2, -196585, 131072, 3, -262120, 196608, 2, -196584, 196608, 3, -131049, 131072, 2, -65513, 131072, 3, -131048, 196608, 2, -65512, 196608, 3, -131051, 131072, 2, -65515, 131072, 3, -131050, 196608, 2, -65514, 196608, 3, 21, 131072, 2, 65557, 131072, 3, 22, 196608, 2, 65558, 196608, 3, 23, 131072, 2, 65559, 131072, 3, 24, 196608, 2, 65560, 196608, 3, 131093, 131072, 2, 196629, 131072, 3, 131094, 196608, 2, 196630, 196608, 3, 131095, 262144, 6, 196631, 262144, 7, 131096, 327680, 6, 196632, 327680, 7, 131091, 131072, 2, 196627, 131072, 3, 131092, 196608, 2, 196628, 196608, 3, 19, 131072, 2, 65555, 131072, 3, 20, 196608, 2, 65556, 196608, 3, 17, 131072, 2, 65553, 131072, 3, 18, 196608, 2, 65554, 196608, 3, 131089, 131072, 2, 196625, 131072, 3, 131090, 196608, 2, 196626, 196608, 3, 131087, 131072, 2, 196623, 131072, 3, 131088, 196608, 2, 196624, 196608, 3, 15, 131072, 2, 65551, 131072, 3, 16, 196608, 2, 65552, 196608, 3, 327687, 0, 6, 393223, 0, 7, 327688, 65536, 6, 393224, 65536, 7, 262157, 0, 2, 327693, 0, 3, 262158, 65536, 2, 327694, 65536, 3, 393229, 0, 2, 458765, 0, 3, 393230, 65536, 2, 458766, 65536, 3, 524301, 0, 2, 589837, 0, 3, 524302, 65536, 2, 589838, 65536, 3, 655373, 0, 2, 720909, 0, 3, 655374, 65536, 2, 720910, 65536, 3, 786445, 0, 2, 851981, 0, 3, 786446, 65536, 2, 851982, 65536, 3, 917517, 0, 4, 983053, 0, 5, 917518, 65536, 4, 983054, 65536, 5, 917519, 131072, 4, 983055, 131072, 5, 917520, 196608, 4, 983056, 196608, 5, 917521, 131072, 4, 983057, 131072, 5, 917522, 196608, 4, 983058, 196608, 5, 917523, 131072, 4, 983059, 131072, 5, 917524, 196608, 4, 983060, 196608, 5, 917525, 131072, 4, 983061, 131072, 5, 917526, 196608, 4, 983062, 196608, 5, 917527, 131072, 4, 983063, 131072, 5, 917528, 196608, 4, 983064, 196608, 5, 917529, 262144, 4, 983065, 262144, 5, 917530, 327680, 4, 983066, 327680, 5, 786457, 262144, 2, 851993, 262144, 3, 786458, 327680, 2, 851994, 327680, 3, 655385, 262144, 2, 720921, 262144, 3, 655386, 327680, 2, 720922, 327680, 3, 524313, 262144, 2, 589849, 262144, 3, 524314, 327680, 2, 589850, 327680, 3, 393241, 262144, 2, 458777, 262144, 3, 393242, 327680, 2, 458778, 327680, 3, 262169, 262144, 2, 327705, 262144, 3, 262170, 327680, 2, 327706, 327680, 3, 262159, 131072, 2, 327695, 131072, 3, 262160, 196608, 2, 327696, 196608, 3, 262161, 131072, 2, 327697, 131072, 3, 262162, 196608, 2, 327698, 196608, 3, 262163, 131072, 2, 327699, 131072, 3, 262164, 196608, 2, 327700, 196608, 3, 262165, 131072, 2, 327701, 131072, 3, 262166, 196608, 2, 327702, 196608, 3, 262167, 131072, 2, 327703, 131072, 3, 262168, 196608, 2, 327704, 196608, 3, 393239, 131072, 2, 458775, 131072, 3, 393240, 196608, 2, 458776, 196608, 3, 393237, 131072, 2, 458773, 131072, 3, 393238, 196608, 2, 458774, 196608, 3, 393235, 131072, 2, 458771, 131072, 3, 393236, 196608, 2, 458772, 196608, 3, 393233, 131072, 2, 458769, 131072, 3, 393234, 196608, 2, 458770, 196608, 3, 393231, 131072, 2, 458767, 131072, 3, 393232, 196608, 2, 458768, 196608, 3, 524303, 131072, 2, 589839, 131072, 3, 524304, 196608, 2, 589840, 196608, 3, 524305, 131072, 2, 589841, 131072, 3, 524306, 196608, 2, 589842, 196608, 3, 524307, 131072, 2, 589843, 131072, 3, 524308, 196608, 2, 589844, 196608, 3, 524309, 131072, 2, 589845, 131072, 3, 524310, 196608, 2, 589846, 196608, 3, 524311, 131072, 2, 589847, 131072, 3, 524312, 196608, 2, 589848, 196608, 3, 655383, 131072, 2, 720919, 131072, 3, 655384, 196608, 2, 720920, 196608, 3, 655381, 131072, 2, 720917, 131072, 3, 655382, 196608, 2, 720918, 196608, 3, 655379, 131072, 2, 720915, 131072, 3, 655380, 196608, 2, 720916, 196608, 3, 655377, 131072, 2, 720913, 131072, 3, 655378, 196608, 2, 720914, 196608, 3, 655375, 131072, 2, 720911, 131072, 3, 655376, 196608, 2, 720912, 196608, 3, 786447, 131072, 2, 851983, 131072, 3, 786448, 196608, 2, 851984, 196608, 3, 786449, 131072, 2, 851985, 131072, 3, 786450, 196608, 2, 851986, 196608, 3, 786451, 131072, 2, 851987, 131072, 3, 786452, 196608, 2, 851988, 196608, 3, 786453, 131072, 2, 851989, 131072, 3, 786454, 196608, 2, 851990, 196608, 3, 786455, 131072, 2, 851991, 131072, 3, 786456, 196608, 2, 851992, 196608, 3)
 
 [node name="TileMap2 Objects" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_v158k")
 format = 2
-layer_0/tile_data = PackedInt32Array(458743, 524288, 8, 262148, 524288, 8, -196614, 524288, 8, 196593, 524288, 8, 262139, 524288, 8, -655346, 524288, 8, -589831, 524288, 8, -458772, 524288, 8, 589801, 524288, 8, 589826, 393216, 9, 589847, 393216, 9, 655369, 393216, 9, -196606, 393216, 9, -655353, 393216, 9, -655336, 393216, 9, -851985, 393216, 9, 589806, 393216, 9, 917486, 393216, 9, 786424, 393216, 9, 1048571, 393216, 9, -786430, 393216, 9, -262158, 393216, 9)
+layer_0/tile_data = PackedInt32Array(458743, 524288, 8, 262148, 524288, 8, -196614, 524288, 8, 196593, 524288, 8, 262139, 524288, 8, -655346, 524288, 8, -589831, 524288, 8, -458772, 524288, 8, 589801, 524288, 8, 589826, 393216, 9, 655369, 393216, 9, -196606, 393216, 9, -655353, 393216, 9, -655336, 393216, 9, -851985, 393216, 9, 589806, 393216, 9, 917486, 393216, 9, 786424, 393216, 9, 1048571, 393216, 9, -786430, 393216, 9, -262158, 393216, 9)
 
 [node name="TileMap SolarPanels" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_exi56")
@@ -862,6 +1000,11 @@ tile_set = SubResource("TileSet_mg4q0")
 format = 2
 layer_0/tile_data = PackedInt32Array(-327662, 0, 16, -262126, 0, 17, -327661, 65536, 16, -262125, 65536, 17, -327660, 131072, 16, -262124, 131072, 17, -327659, 196608, 16, -262123, 196608, 17)
 
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(408, -208, 408, -192, 408, -200, 328, -200, 328, -208, 328, -192, 328, -200, 248, -200, 248, -208, 248, -192, 248, -200, 289, -200, 289, -96)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 physics_interpolation_mode = 1
 position = Vector2(1, 0)
@@ -869,40 +1012,47 @@ position = Vector2(1, 0)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, 0)
 zoom = Vector2(3, 3)
+limit_left = -416
+limit_top = -256
+limit_right = 448
+limit_bottom = 272
+editor_draw_limits = true
 
-[node name="Node2D" type="Node2D" parent="Player/Camera2D"]
-position = Vector2(-17, -94)
+[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
+visible = false
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 0, 0)
+follow_viewport_scale = 0.9
+
+[node name="TextureHealthBar" type="TextureProgressBar" parent="Player/Camera2D/CanvasLayer"]
+offset_right = 192.0
+offset_bottom = 64.0
 scale = Vector2(0.5, 0.2)
-
-[node name="TextureHealthBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
-offset_left = 208.0
-offset_top = -32.0
-offset_right = 400.0
-offset_bottom = 32.0
 value = 100.0
 texture_progress = ExtResource("4_v158k")
 
-[node name="TextureHungerBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
-offset_left = 208.0
-offset_top = 45.0
-offset_right = 400.0
-offset_bottom = 109.0
+[node name="TextureHungerBar" type="TextureProgressBar" parent="Player/Camera2D/CanvasLayer"]
+offset_top = 14.5
+offset_right = 192.0
+offset_bottom = 78.5
+scale = Vector2(0.5, 0.2)
 value = 100.0
 texture_progress = ExtResource("6_o5yvi")
 
-[node name="TextureEnergyBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
-offset_left = 208.0
-offset_top = 125.0
-offset_right = 400.0
-offset_bottom = 189.0
+[node name="TextureEnergyBar" type="TextureProgressBar" parent="Player/Camera2D/CanvasLayer"]
+offset_left = 87.0
+offset_top = -69.0
+offset_right = 279.0
+offset_bottom = -5.0
+scale = Vector2(0.5, 0.2)
 value = 100.0
 texture_progress = ExtResource("7_rku1e")
 
-[node name="TextureOxygenBar" type="TextureProgressBar" parent="Player/Camera2D/Node2D"]
-offset_left = 208.0
-offset_top = 205.0
-offset_right = 400.0
-offset_bottom = 269.0
+[node name="TextureOxygenBar" type="TextureProgressBar" parent="Player/Camera2D/CanvasLayer"]
+offset_top = 30.0
+offset_right = 192.0
+offset_bottom = 94.0
+scale = Vector2(0.5, 0.2)
 value = 100.0
 texture_progress = ExtResource("8_rfjv2")
 
@@ -918,7 +1068,7 @@ texture = ExtResource("14_7t8sx")
 lifetime = 2.0
 trail_enabled = true
 trail_lifetime = 0.15
-process_material = SubResource("ParticleProcessMaterial_mg4q0")
+process_material = SubResource("ParticleProcessMaterial_exi56")
 
 [node name="StormTimer" type="Timer" parent="Player/Camera2D/StaticBody2D"]
 wait_time = 5.0
@@ -942,7 +1092,7 @@ offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 27.0
 text = "Alert"
-label_settings = SubResource("LabelSettings_mg4q0")
+label_settings = SubResource("LabelSettings_7t8sx")
 
 [node name="DustStormInfo" type="Window" parent="Player/Camera2D/StaticBody2D"]
 auto_translate_mode = 1
@@ -954,7 +1104,7 @@ visible = false
 offset_right = 799.0
 offset_bottom = 499.0
 text = "Welcome to your first Mars dust storm astronaut! This will be the only time you get this warning so read carefully! The danger of dust storms is not the wind, only the dust itself. This is because the atmosphere on Mars is so thin that the wind itself does not have enough power to destroy your equipment. In fact, the Martian atmosphere is only about 1% as dense as the Earth's atmosphere! On top of this, winds during dust storms on Mars only have an estimated maximum of 60 miles per hour, which is not very fast compared to Earth standards. However, the wind does have enough power to pick up the dust sitting on the surface. This is a problem because the dust particles are extremely small and electrostatic. This means that they stick to everything, like how styrofoam does. The dust is also very gritty, which can cause damage to moving parts. It can cause some of your equipment, such as your solar panels and MOXIE, to be non-operational, so be sure to clean off the dust from your equipment after storms! During the storm, take shelter in your base to prevent yourself from being harmed by the dust! For future storms, you can tell that a storm is going to occur soon by seeing the red alert in the top left of your screen. Good luck!"
-label_settings = SubResource("LabelSettings_iivbl")
+label_settings = SubResource("LabelSettings_vm72l")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -964,33 +1114,33 @@ stream = ExtResource("4_3dryh")
 autoplay = true
 bus = &"Music"
 
-[node name="Plants" type="Node" parent="."]
+[node name="fake plants" type="Node" parent="."]
 
-[node name="Mars Plant" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(168, -7)
 
-[node name="Mars Plant2" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant2" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(-140, 13)
 
-[node name="Mars Plant3" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant3" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(58, -50)
 
-[node name="Mars Plant4" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant4" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(1, 184)
 
-[node name="Mars Plant5" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant5" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(145, 90)
 
-[node name="Mars Plant6" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant6" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(-44, -53)
 
-[node name="Mars Plant7" parent="Plants" instance=ExtResource("3_wrm1d")]
+[node name="Mars Plant7" parent="fake plants" instance=ExtResource("3_wrm1d")]
 visible = false
 position = Vector2(-6, 72)
 
@@ -1056,6 +1206,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SolarPanel/SolarPanel Area"]
 position = Vector2(328, -200)
 shape = SubResource("RectangleShape2D_iivbl")
+debug_color = Color(0.96316, 9.62615e-08, 0.500355, 0.42)
 
 [node name="KeyPrompt" type="Sprite2D" parent="SolarPanel"]
 position = Vector2(328, -200)
@@ -1078,6 +1229,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="ColorRect" type="ColorRect" parent="SolarPanel"]
+visible = false
+modulate = Color(1.51612e-06, 0.539962, 0.217771, 1)
+offset_left = 280.0
+offset_top = -206.0
+offset_right = 376.0
+offset_bottom = -191.0
+
+[node name="Label" type="Label" parent="SolarPanel/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 3.0
+offset_right = 74.0
+offset_bottom = 26.0
+text = "Cleared!"
+label_settings = SubResource("LabelSettings_mg4q0")
+
 [node name="MOXIEInput" type="Node2D" parent="."]
 script = ExtResource("21_exi56")
 
@@ -1085,11 +1254,11 @@ script = ExtResource("21_exi56")
 collision_mask = 2
 
 [node name="InputCollision" type="CollisionShape2D" parent="MOXIEInput/InputArea"]
-position = Vector2(336, 144)
+position = Vector2(128, 96)
 shape = SubResource("RectangleShape2D_7nbq1")
 
 [node name="KeyPrompt" type="Sprite2D" parent="MOXIEInput"]
-position = Vector2(336, 116)
+position = Vector2(128, 68)
 texture = ExtResource("17_85qyi")
 region_enabled = true
 region_rect = Rect2(61, 0, 13, 15)
@@ -1108,6 +1277,24 @@ label_settings = SubResource("LabelSettings_iivbl")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MOXIEInput"]
+visible = false
+modulate = Color(1.51612e-06, 0.539962, 0.217771, 1)
+offset_left = 82.0
+offset_top = 60.0
+offset_right = 178.0
+offset_bottom = 75.0
+
+[node name="Label" type="Label" parent="MOXIEInput/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 3.0
+offset_right = 74.0
+offset_bottom = 26.0
+text = "Cleared!"
+label_settings = SubResource("LabelSettings_mg4q0")
 
 [node name="IntroText" type="Window" parent="."]
 auto_translate_mode = 1
@@ -1131,19 +1318,69 @@ occluder = SubResource("OccluderPolygon2D_7nbq1")
 occluder_light_mask = 0
 
 [node name="BaseArea" type="Area2D" parent="."]
+visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
-position = Vector2(320, 0)
+position = Vector2(320, 80.5)
 shape = SubResource("RectangleShape2D_mg4q0")
+
+[node name="BaseIntroText" type="Window" parent="."]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(800, 500)
+visible = false
+
+[node name="Label" type="Label" parent="BaseIntroText"]
+offset_right = 799.0
+offset_bottom = 499.0
+text = "Welcome to your base! Here, you don't have to worry about oxygen or radiation. In order to protect you from radiation, the base has been built underground. The reason for this is because Mars does not have a atmosphere and magnetic field like Earth, which allows much more radiation from the Sun to reach the surface. The soil on top of you helps to save you from this! To learn about how your base is provided with oxygen, go over to the vent on the floor. To learn about your food supply, go over to the plants. To monitor the functionality of your life support systems, go over to the computer. Hope you find it comfy!"
+label_settings = SubResource("LabelSettings_iivbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Borders" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(-423, 13.5)
+shape = SubResource("RectangleShape2D_exi56")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
+position = Vector2(28, -260)
+shape = SubResource("RectangleShape2D_7t8sx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(453, 16)
+shape = SubResource("RectangleShape2D_exi56")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(5, 277)
+shape = SubResource("RectangleShape2D_7t8sx")
+
+[node name="BasePlants" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="BasePlants"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BasePlants/Area2D"]
+position = Vector2(288, 77)
+sprite_frames = SubResource("SpriteFrames_6uxt2")
+frame = 9
+frame_progress = 0.114275
 
 [connection signal="energyChanged" from="Player" to="." method="_on_player_energy_changed"]
 [connection signal="healthChanged" from="Player" to="." method="_on_player_health_changed"]
 [connection signal="hungerChanged" from="Player" to="." method="_on_player_hunger_changed"]
 [connection signal="oxygenChanged" from="Player" to="." method="_on_player_oxygen_changed"]
 [connection signal="dustStorm" from="Player/Camera2D/StaticBody2D" to="." method="_on_static_body_2d_dust_storm"]
-[connection signal="dustStorm" from="Player/Camera2D/StaticBody2D" to="SolarPanel" method="_on_static_body_2d_dust_storm"]
-[connection signal="dustStorm" from="Player/Camera2D/StaticBody2D" to="MOXIEInput" method="_on_static_body_2d_dust_storm"]
 [connection signal="timeout" from="Player/Camera2D/StaticBody2D/StormTimer" to="Player/Camera2D/StaticBody2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/Camera2D/StaticBody2D/AlertTimer" to="Player/Camera2D/StaticBody2D" method="_on_alert_timer_timeout"]
 [connection signal="close_requested" from="Player/Camera2D/StaticBody2D/DustStormInfo" to="Player/Camera2D/StaticBody2D" method="_on_dust_storm_info_close_requested"]
@@ -1166,3 +1403,4 @@ shape = SubResource("RectangleShape2D_mg4q0")
 [connection signal="close_requested" from="IntroText" to="." method="_on_intro_text_close_requested"]
 [connection signal="body_entered" from="BaseArea" to="." method="_on_base_area_body_entered"]
 [connection signal="body_exited" from="BaseArea" to="." method="_on_base_area_body_exited"]
+[connection signal="close_requested" from="BaseIntroText" to="." method="_on_base_intro_text_close_requested"]
