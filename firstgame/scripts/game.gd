@@ -8,6 +8,7 @@ extends Node2D
 @onready var moxie = $OxyGen
 @onready var moxieInput = $MOXIEInput
 @onready var solarPanel = $SolarPanel
+@onready var waterExtractor = $WaterExtractor
 signal oxygenTimer
 signal hungerTimer
 signal stopMove
@@ -19,10 +20,6 @@ var StormUnlocked = false
 var inBase = false
 var visitedBase = false
 func _ready() -> void:
-	moxie.stopMove.connect(player.stopMove)
-	moxieInput.stopMove.connect(player.stopMove)
-	solarPanel.stopMove.connect(player.stopMove)
-	stopMove.connect(player.stopMove)
 	oxygenTimer.connect(player.oxygenChange)
 	hungerTimer.connect(player.hungerChange)
 	$Player/Camera2D/CanvasLayer.visible = true
@@ -32,7 +29,7 @@ func _ready() -> void:
 	$BaseIntroText.hide()
 
 func _on_oxygen_timer_timeout():
-	if inBase:
+	if inBase and (moxieInput.isFunctional and moxieInput.hasPower):
 		oxygenTimer.emit(-2)
 	else:
 		oxygenTimer.emit(1)
@@ -65,7 +62,6 @@ func _on_water_extractor_start_storm() -> void:
 	waterExtractorVisited = true
 
 func _on_player_health_changed(health:int) -> void:
-	print(health)
 	textureHealthBar.value = health
 
 func _on_player_energy_changed(energy:int) -> void:

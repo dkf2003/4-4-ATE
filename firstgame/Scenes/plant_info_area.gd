@@ -1,10 +1,17 @@
 extends Area2D
-var player_in_area
+var visited = false
+signal stopMove
+
+func _ready() -> void:
+	$"../PlantInfoText".hide()
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.has_method("player"):
-		player_in_area = true
-		
-func _on_body_exited(body: Node2D) -> void:
-	if body.has_method("player"):
-		player_in_area = false
+	print("player in")
+	if not visited and body.has_method("player"):
+		$"../PlantInfoText".show()
+		stopMove.emit()
+		visited = true
+
+func _on_plant_info_text_close_requested() -> void:
+	$"../PlantInfoText".hide()
+	stopMove.emit()

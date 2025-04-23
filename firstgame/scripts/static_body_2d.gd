@@ -35,7 +35,7 @@ func _on_alert_timer_timeout() -> void:
 	if weather == "none":
 		if not stormInfo:
 			$DustStormInfo.visible = true
-		$ColorRect.visible = true
+		$"../CanvasLayer/ColorRect".visible = true
 		if stormInfo:
 			var tween = create_tween()
 			tween.tween_property($CanvasModulate, "color", Color(1.0, 0.58, 0.482), 5)

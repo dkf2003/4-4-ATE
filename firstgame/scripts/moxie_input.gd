@@ -2,10 +2,12 @@ extends Node2D
 var player_in_area = false
 var visited = false
 var isFunctional = true
+var hasPower = true
 signal stopMove
 signal startStorm
 
 func _process(delta: float) -> void:
+	hasPower = $"../SolarPanel".isFunctional
 	if player_in_area:
 		if not visited:
 			$KeyPrompt.show()
