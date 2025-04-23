@@ -14,6 +14,7 @@ signal stopMove
 var moxieVisited = false
 var solarPanelVisited = false
 var moxieInputVisited = false
+var waterExtractorVisited = false
 var StormUnlocked = false
 var inBase = false
 var visitedBase = false
@@ -40,7 +41,7 @@ func _on_hunger_timer_timeout() -> void:
 	hungerTimer.emit(1)
 
 func _process(delta: float) -> void:
-	if moxieVisited && (solarPanelVisited && moxieInputVisited):
+	if moxieVisited && (solarPanelVisited && (moxieInputVisited && waterExtractorVisited)):
 		if not StormUnlocked:
 			$Player/Camera2D/StaticBody2D/AlertTimer.start()
 			StormUnlocked = true
@@ -59,6 +60,9 @@ func _on_solar_panel_start_storm() -> void:
 
 func _on_moxie_input_start_storm() -> void:
 	moxieInputVisited = true
+
+func _on_water_extractor_start_storm() -> void:
+	waterExtractorVisited = true
 
 func _on_player_health_changed(health:int) -> void:
 	print(health)
@@ -84,7 +88,6 @@ func _on_base_area_body_exited(body: Node2D) -> void:
 	inBase = false
 
 func _on_storm_damage_timer_timeout() -> void:
-	print('storm damage timer')
 	if not inBase:
 		player.healthChange(3)
 
@@ -99,3 +102,6 @@ func _on_base_intro_text_close_requested() -> void:
 	$HungerTimer.start()
 	stopMove.emit()
 	$BaseIntroText.hide()
+
+func _on_base_plants_ate() -> void:
+	player.hungerChange(-5)

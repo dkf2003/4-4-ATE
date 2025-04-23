@@ -1,5 +1,12 @@
+res://Scenes/base_plants.tscn
+res://Scenes/base_plants.gd
 res://Scenes/game.tscn
-res://Scenes/mars_plant.tscn
-res://Scenes/crate.tscn
-res://Scenes/player.tscn
 res://scripts/game.gd
+res://scripts/player.gd
+res://Scenes/player.tscn
+res://scripts/water_extractor.gd
+res://scripts/solar_panel.gd
+res://scripts/oxy_gen.gd
+res://scripts/moxie_input.gd
+res://scripts/static_body_2d.gd
+res://Scenes/plant_info_area.gd

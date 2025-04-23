@@ -9,14 +9,16 @@ signal startStorm
 
 func _process(delta: float) -> void:
 	if player_in_area:
-		$KeyPrompt.show()
+		if not visited:
+			$KeyPrompt.show()
 		if Input.is_action_just_pressed("e"):
 			if not visited:
 				$"../OxygenTimer".stop()
 				$"../HungerTimer".stop()
 				$Window.show()
+				$KeyPrompt.hide()
 				stopMove.emit()
-			else:
+			elif not isFunctional:
 				$ColorRect.visible = true
 				isFunctional = true
 	elif isFunctional:

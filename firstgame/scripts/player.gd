@@ -33,6 +33,9 @@ func oxygenChange(change: int):
 		oxygenLevel = 0
 		healthChange(5)
 		oxygenChanged.emit(oxygenLevel)
+	elif oxygenLevel > 100:
+		oxygenLevel = 100
+		oxygenChanged.emit(oxygenLevel)
 	else:
 		oxygenChanged.emit(oxygenLevel)
 
@@ -41,6 +44,9 @@ func hungerChange(change: int):
 	if hunger < 0:
 		hunger = 0
 		healthChange(5)
+		hungerChanged.emit(hunger)
+	elif hunger > 100:
+		hunger = 100
 		hungerChanged.emit(hunger)
 	else:
 		hungerChanged.emit(hunger)
