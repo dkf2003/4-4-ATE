@@ -30,12 +30,12 @@ func _ready() -> void:
 
 func _on_oxygen_timer_timeout():
 	if inBase and (moxieInput.isFunctional and moxieInput.hasPower):
-		oxygenTimer.emit(-2)
+		oxygenTimer.emit(-4)
 	else:
-		oxygenTimer.emit(1)
+		oxygenTimer.emit(2)
 
 func _on_hunger_timer_timeout() -> void:
-	hungerTimer.emit(1)
+	hungerTimer.emit(2)
 
 func _process(delta: float) -> void:
 	if moxieVisited && (solarPanelVisited && (moxieInputVisited && waterExtractorVisited)):
@@ -85,6 +85,7 @@ func _on_base_area_body_exited(body: Node2D) -> void:
 
 func _on_storm_damage_timer_timeout() -> void:
 	if not inBase:
+		print("storm damage")
 		player.healthChange(3)
 
 func _on_static_body_2d_dust_storm() -> void:

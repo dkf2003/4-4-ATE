@@ -17,13 +17,14 @@ func _ready() -> void:
 	$CanvasModulate.visible = true
 
 func _on_timer_timeout() -> void:
-	dustStorm.emit()
 	if weather == "none":
+		dustStorm.emit()
 		weather = "dust"
 		$StormTimer.wait_time = 10
 		$StormTimer.start()
 	elif weather == "dust":
 		weather = "none"
+		$"../../../StormDamageTimer".stop()
 		var tween = create_tween()
 		tween.tween_property($CanvasModulate, "color", Color.WHITE, 3)
 		$"../CanvasLayer/ColorRect".visible = false

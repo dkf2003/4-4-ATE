@@ -25,8 +25,11 @@ func stopMove():
 
 func healthChange(change: int):
 	health -= change
+	if health < 0:
+		health = 0
+		get_tree().change_scene_to_file("res://Scenes/gameover.tscn")
 	healthChanged.emit(health)
-	
+
 func oxygenChange(change: int):
 	oxygenLevel -= change
 	if oxygenLevel < 0:
