@@ -19,6 +19,8 @@ var waterExtractorVisited = false
 var StormUnlocked = false
 var inBase = false
 var visitedBase = false
+var oxygenIncrement = 2
+var hungerIncrement = 2
 func _ready() -> void:
 	oxygenTimer.connect(player.oxygenChange)
 	hungerTimer.connect(player.hungerChange)
@@ -32,10 +34,10 @@ func _on_oxygen_timer_timeout():
 	if inBase and (moxieInput.isFunctional and moxieInput.hasPower):
 		oxygenTimer.emit(-4)
 	else:
-		oxygenTimer.emit(2)
+		oxygenTimer.emit(oxygenIncrement)
 
 func _on_hunger_timer_timeout() -> void:
-	hungerTimer.emit(2)
+	hungerTimer.emit(hungerIncrement)
 
 func _process(delta: float) -> void:
 	if moxieVisited && (solarPanelVisited && (moxieInputVisited && waterExtractorVisited)):
@@ -63,15 +65,18 @@ func _on_water_extractor_start_storm() -> void:
 
 func _on_player_health_changed(health:int) -> void:
 	textureHealthBar.value = health
+	$Player/Camera2D/CanvasLayer/HealthLevel.text = "%s" % health
 
 func _on_player_energy_changed(energy:int) -> void:
 	textureEnergyBar.value = energy
 
 func _on_player_hunger_changed(hunger:int) -> void:
 	textureHungerBar.value = hunger
+	$Player/Camera2D/CanvasLayer/HungerLevel.text = "%s" % hunger
 
 func _on_player_oxygen_changed(oxygen:int) -> void:
 	textureOxygenBar.value = oxygen
+	$Player/Camera2D/CanvasLayer/OxygenLevel.text = "%s" % oxygen
 
 func _on_base_area_body_entered(body: Node2D) -> void:
 	if not visitedBase:
@@ -102,3 +107,8 @@ func _on_base_intro_text_close_requested() -> void:
 
 func _on_base_plants_ate() -> void:
 	player.hungerChange(-5)
+
+
+func _on_difficulty_increase_timeout() -> void:
+	oxygenIncrement += 1
+	hungerIncrement += 1

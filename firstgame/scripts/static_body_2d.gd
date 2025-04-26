@@ -1,8 +1,9 @@
 extends StaticBody2D
 var weather = "none"
 var stormInfo = false
+var firstStorm = true
 signal dustStorm
-
+signal stopMove
 func _process(delta: float) -> void:
 	if weather == "none":
 		$GPUParticles2D.emitting = false
@@ -17,6 +18,10 @@ func _ready() -> void:
 	$CanvasModulate.visible = true
 
 func _on_timer_timeout() -> void:
+	if firstStorm:
+		GlobalVars.timeStart = Time.get_ticks_msec()
+		$"../../../DifficultyIncrease".start()
+		firstStorm = false
 	if weather == "none":
 		dustStorm.emit()
 		weather = "dust"
@@ -36,6 +41,9 @@ func _on_alert_timer_timeout() -> void:
 	if weather == "none":
 		if not stormInfo:
 			$DustStormInfo.visible = true
+			stopMove.emit()
+			$"../../../OxygenTimer".stop()
+			$"../../../HungerTimer".stop()
 		$"../CanvasLayer/ColorRect".visible = true
 		if stormInfo:
 			var tween = create_tween()
@@ -45,6 +53,8 @@ func _on_alert_timer_timeout() -> void:
 
 func _on_dust_storm_info_close_requested() -> void:
 	$DustStormInfo.hide()
+	$"../../../OxygenTimer".start()
+	$"../../../HungerTimer".start()
 	var tween = create_tween()
 	tween.tween_property($CanvasModulate, "color", Color(1.0, 0.58, 0.482), 5)
 	$StormTimer.wait_time = 5

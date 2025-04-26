@@ -1,6 +1,7 @@
+Label
+Timer
 Button
 RichTextLabel
-Label
 CanvasLayer
 CollisionShape2D
 Area2D
@@ -10,6 +11,4 @@ StaticBody2D
 Line2D
 Sprite2D
 AnimatedSprite2D
-Timer
 TileMap
-TileMapLayer

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=63 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
@@ -809,11 +809,6 @@ font = ExtResource("18_85qyi")
 font_size = 8
 font_color = Color(0, 1, 1, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_fkdbe"]
-font = ExtResource("18_85qyi")
-font_size = 8
-font_color = Color(0, 0, 0, 1)
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_exi56"]
 lifetime_randomness = 0.5
 particle_flag_disable_z = true
@@ -987,6 +982,7 @@ limit_bottom = 272
 editor_draw_limits = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
+visible = false
 scale = Vector2(4, 4)
 transform = Transform2D(4, 0, 0, 4, 0, 0)
 follow_viewport_scale = 0.9
@@ -1037,33 +1033,6 @@ offset_bottom = 94.0
 scale = Vector2(0.5, 0.2)
 value = 100.0
 texture_progress = ExtResource("8_rfjv2")
-
-[node name="OxygenLevel" type="Label" parent="Player/Camera2D/CanvasLayer"]
-offset_left = 1.0
-offset_top = 32.5
-offset_right = 92.0
-offset_bottom = 48.5
-text = "100"
-label_settings = SubResource("LabelSettings_fkdbe")
-horizontal_alignment = 1
-
-[node name="HungerLevel" type="Label" parent="Player/Camera2D/CanvasLayer"]
-offset_left = 1.25
-offset_top = 18.0
-offset_right = 92.25
-offset_bottom = 34.0
-text = "100"
-label_settings = SubResource("LabelSettings_fkdbe")
-horizontal_alignment = 1
-
-[node name="HealthLevel" type="Label" parent="Player/Camera2D/CanvasLayer"]
-offset_left = 35.0
-offset_top = 2.25
-offset_right = 59.0
-offset_bottom = 18.25
-text = "100"
-label_settings = SubResource("LabelSettings_fkdbe")
-horizontal_alignment = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Player/Camera2D"]
 script = ExtResource("14_mg4q0")

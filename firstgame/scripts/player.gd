@@ -27,6 +27,7 @@ func healthChange(change: int):
 	health -= change
 	if health < 0:
 		health = 0
+		GlobalVars.timeEnd = Time.get_ticks_msec()
 		get_tree().change_scene_to_file("res://Scenes/gameover.tscn")
 	healthChanged.emit(health)
 
