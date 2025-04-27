@@ -1,8 +1,3 @@
 res://Scenes/game.tscn
-res://scripts/game.gd
-res://scripts/static_body_2d.gd
-res://scripts/GlobalVars.gd
-res://scripts/player.gd
-res://Scenes/gameover.tscn
-res://scripts/gameover.gd
 res://Scenes/base_plants.tscn
+res://Scenes/gameover.tscn
