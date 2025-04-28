@@ -4,6 +4,9 @@ var isFunctional = true
 var visited = false
 signal stopMove
 signal startStorm
+
+@onready var sfx_sweeping: AudioStreamPlayer2D = $sfx_Sweeping
+
 #func _on_body_entered(body: Node2D) -> void:
 	#print("'E' Collect")
 
@@ -19,6 +22,7 @@ func _process(delta: float) -> void:
 				$KeyPrompt.hide()
 				stopMove.emit()
 			elif not isFunctional:
+				sfx_sweeping.play()
 				$ColorRect.visible = true
 				isFunctional = true
 	elif isFunctional:

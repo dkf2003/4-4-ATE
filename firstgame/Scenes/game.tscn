@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://8qcr6ci8ipea"]
+[gd_scene load_steps=73 format=3 uid="uid://8qcr6ci8ipea"]
 
 [ext_resource type="PackedScene" uid="uid://c6bww8w3j6yl1" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://6jxpt4vx57b8" path="res://scripts/game.gd" id="1_v158k"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ci8yq8yjw1fl4" path="res://assets/other assets/Keys.png" id="17_85qyi"]
 [ext_resource type="FontFile" uid="uid://6vefpkhfcxpr" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="18_85qyi"]
 [ext_resource type="Script" uid="uid://c4480k2osyi6v" path="res://scripts/solar_panel.gd" id="20_7nbq1"]
+[ext_resource type="AudioStream" uid="uid://i2ofyv0qhs22" path="res://assets/Audio/Sweeping.mp3" id="21_cwurv"]
 [ext_resource type="Script" uid="uid://buihw5bifsth1" path="res://scripts/moxie_input.gd" id="21_exi56"]
 [ext_resource type="PackedScene" uid="uid://b7olkl7tgxooi" path="res://Scenes/base_plants.tscn" id="22_7t8sx"]
 [ext_resource type="Script" uid="uid://242cm2ihumqc" path="res://scripts/water_extractor.gd" id="23_22asu"]
@@ -28,6 +29,10 @@
 [ext_resource type="Texture2D" uid="uid://5737qbp4krt5" path="res://assets/waterExtractor/part-0004.png" id="24_22asu"]
 [ext_resource type="Script" uid="uid://ntdul6l8lyvs" path="res://scripts/console.gd" id="25_fkdbe"]
 [ext_resource type="FontFile" uid="uid://2kwvjoiie1vg" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="26_81klo"]
+[ext_resource type="AudioStream" uid="uid://2cc4eakunpx6" path="res://assets/Audio/Metal Impact.mp3" id="26_mucmn"]
+[ext_resource type="AudioStream" uid="uid://cqdia7y1ddbrx" path="res://assets/Audio/Basic Eat.mp3" id="28_8m3t6"]
+[ext_resource type="AudioStream" uid="uid://dgbdin0muh0ie" path="res://assets/Audio/Short Beep.mp3" id="32_ese38"]
+[ext_resource type="AudioStream" uid="uid://d13xftu2c0pfr" path="res://assets/Audio/Wind.mp3" id="33_oeip8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l0tm"]
 texture = ExtResource("2_i6g32")
@@ -1432,6 +1437,10 @@ offset_bottom = 26.0
 text = "Cleared!"
 label_settings = SubResource("LabelSettings_mg4q0")
 
+[node name="sfx_Sweeping" type="AudioStreamPlayer2D" parent="SolarPanel"]
+stream = ExtResource("21_cwurv")
+volume_db = 2.0
+
 [node name="MOXIEInput" type="Node2D" parent="."]
 script = ExtResource("21_exi56")
 
@@ -1480,6 +1489,10 @@ offset_right = 74.0
 offset_bottom = 26.0
 text = "Cleared!"
 label_settings = SubResource("LabelSettings_mg4q0")
+
+[node name="sfx_Sweeping" type="AudioStreamPlayer2D" parent="MOXIEInput"]
+stream = ExtResource("21_cwurv")
+volume_db = 2.0
 
 [node name="WaterExtractor" type="Node2D" parent="."]
 script = ExtResource("23_22asu")
@@ -1560,6 +1573,10 @@ offset_right = 74.0
 offset_bottom = 26.0
 text = "Cleaned!"
 label_settings = SubResource("LabelSettings_mg4q0")
+
+[node name="sfx_MetalImpact" type="AudioStreamPlayer2D" parent="WaterExtractor"]
+stream = ExtResource("26_mucmn")
+volume_db = 2.0
 
 [node name="IntroText" type="Window" parent="."]
 auto_translate_mode = 1
@@ -1675,6 +1692,9 @@ position = Vector2(320, 203)
 [node name="BasePlants6" parent="BasePlants" instance=ExtResource("22_7t8sx")]
 position = Vector2(384, 203)
 
+[node name="sfx_BasicEat" type="AudioStreamPlayer2D" parent="BasePlants"]
+stream = ExtResource("28_8m3t6")
+
 [node name="plantInfoArea" type="Area2D" parent="BasePlants"]
 collision_mask = 2
 script = ExtResource("23_fkdbe")
@@ -1744,6 +1764,13 @@ position = Vector2(321, -91)
 texture = ExtResource("17_85qyi")
 region_enabled = true
 region_rect = Rect2(61, 0, 13, 15)
+
+[node name="sfx_interact" type="AudioStreamPlayer2D" parent="Console"]
+stream = ExtResource("32_ese38")
+
+[node name="sfx_storm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("33_oeip8")
+volume_db = 2.0
 
 [connection signal="stopMove" from="." to="Player" method="stopMove"]
 [connection signal="energyChanged" from="Player" to="." method="_on_player_energy_changed"]

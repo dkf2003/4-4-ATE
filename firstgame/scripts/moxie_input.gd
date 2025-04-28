@@ -6,6 +6,8 @@ var hasPower = true
 signal stopMove
 signal startStorm
 
+@onready var sfx_sweeping: AudioStreamPlayer2D = $sfx_Sweeping
+
 func _process(delta: float) -> void:
 	hasPower = $"../SolarPanel".isFunctional
 	if player_in_area:
@@ -19,6 +21,7 @@ func _process(delta: float) -> void:
 				$KeyPrompt.hide()
 				stopMove.emit()
 			elif not isFunctional:
+				sfx_sweeping.play()
 				$ColorRect.visible = true
 				isFunctional = true
 	elif isFunctional:

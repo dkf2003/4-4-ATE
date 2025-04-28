@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var sfx_storm: AudioStreamPlayer2D = $sfx_storm
+
 @onready var textureHealthBar = $Player/Camera2D/CanvasLayer/TextureHealthBar
 @onready var textureEnergyBar = $Player/Camera2D/CanvasLayer/TextureEnergyBar
 @onready var textureOxygenBar = $Player/Camera2D/CanvasLayer/TextureOxygenBar
@@ -96,6 +98,7 @@ func _on_storm_damage_timer_timeout() -> void:
 func _on_static_body_2d_dust_storm() -> void:
 	if $StormDamageTimer.is_stopped():
 		$StormDamageTimer.start()
+		sfx_storm.play()
 	else:
 		$StormDamageTimer.stop()
 

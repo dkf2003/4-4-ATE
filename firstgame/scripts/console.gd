@@ -1,4 +1,7 @@
 extends Node2D
+
+@onready var sfx_interact: AudioStreamPlayer2D = $sfx_interact
+
 @onready var solarPanel = $"../SolarPanel"
 @onready var moxieInput = $"../MOXIEInput"
 @onready var waterExtractor = $"../WaterExtractor"
@@ -20,6 +23,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_in_area:
 		if Input.is_action_just_pressed("e"):
+			sfx_interact.play()
 			$ConsoleText.show()
 			$"../OxygenTimer".stop()
 			$"../HungerTimer".stop()

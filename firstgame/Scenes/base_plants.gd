@@ -1,4 +1,7 @@
 extends Node2D
+
+@onready var sfx_basic_eat: AudioStreamPlayer2D = $"../sfx_BasicEat"
+
 @onready var timer = $GrowthTimer
 @onready var sprite = $Area2D/AnimatedSprite2D
 @onready var keyPrompt = $KeyPrompt
@@ -34,6 +37,7 @@ func _process(delta: float) -> void:
 	if harvestable:
 		keyPrompt.visible = true
 		if Input.is_action_just_pressed("e") and player_in_area:
+			sfx_basic_eat.play()
 			ate.emit()
 			sprite.frame = 0
 			harvestable = false
