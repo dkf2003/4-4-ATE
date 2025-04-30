@@ -1,9 +1,3 @@
 res://Scenes/game.tscn
-res://scripts/solar_panel.gd
 res://Scenes/base_plants.tscn
 res://Scenes/gameover.tscn
-res://scripts/water_extractor.gd
-res://scripts/moxie_input.gd
-res://Scenes/base_plants.gd
-res://scripts/console.gd
-res://scripts/game.gd

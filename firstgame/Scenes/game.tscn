@@ -1334,7 +1334,8 @@ visible = false
 [node name="Label" type="Label" parent="Player/Camera2D/StaticBody2D/DustStormInfo"]
 offset_right = 799.0
 offset_bottom = 499.0
-text = "Welcome to your first Mars dust storm astronaut! This will be the only time you get this warning so read carefully! The danger of dust storms is not the wind, only the dust itself. This is because the atmosphere on Mars is so thin that the wind itself does not have enough power to destroy your equipment. In fact, the Martian atmosphere is only about 1% as dense as the Earth's atmosphere! On top of this, winds during dust storms on Mars only have an estimated maximum of 60 miles per hour, which is not very fast compared to Earth standards. However, the wind does have enough power to pick up the dust sitting on the surface. This is a problem because the dust particles are extremely small and electrostatic. This means that they stick to everything, like how styrofoam does. The dust is also very gritty, which can cause damage to moving parts. It can cause some of your equipment, such as your solar panels and MOXIE, to be non-operational, so be sure to clean off the dust from your equipment after storms! During the storm, take shelter in your base to prevent yourself from being harmed by the dust! For future storms, you can tell that a storm is going to occur soon by seeing the red alert in the top right of your screen. Good luck!"
+text = "Warning! Incoming Dust Storm! The danger of dust storms is not the wind, but rather the dust itself. This is because the atmosphere on Mars is so thin that the wind itself doesn’t have the necessary force to damage your equipment. The Martian atmosphere is only about 1% as dense as the Earth's atmosphere! The winds during Mars’ dust storms only have an estimated max speed of 60 miles per hour, which is not very fast compared to Earth. However, the wind does have enough power to pick up the dust sitting on the surface. This is a problem because the dust particles are extremely small and electrostatic. This means that they stick to everything, like how styrofoam does. The dust is also very gritty, which can cause damage to moving parts. It can cause some of your equipment, such as your solar panels and MOXIE, to be non-operational, so be sure to clean off the dust from your equipment after storms! During the storm, take shelter in your base to prevent yourself from being harmed by the dust! For the future, you can tell that a storm is going to occur when the red alert appears in the top right of your screen. Good luck!
+"
 label_settings = SubResource("LabelSettings_vm72l")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1413,7 +1414,10 @@ visible = false
 [node name="Label" type="Label" parent="SolarPanel/Window"]
 offset_right = 799.0
 offset_bottom = 499.0
-text = "These are solar panels that create electricity by harnessing the energy of the sun. These are responsible for providing all of the electricity you are currently using to stay alive. These only come with a few drawbacks. The first is that they are less efficient than they are on Earth. Even though the atmosphere is thinner on Mars, blocking less of the sunlight, Mars is much further from the Sun than Earth. This results in Mars only receiving less than half the sunlight that Earth receives. Don't worry, though! There are enough solar panels here to sustain you and your machines. The second draw back is that due to the seasons on Mars, the power they generate is not always constant, but luckily for you, the base is located near the equator. This allows the solar panels to provide a predictable amount of energy all of the time! Just be sure to check on them once in a while, because dust could cover them, blocking any sunlight from reaching the panels!"
+text = "These are solar panels that create electricity by absorbing the energy of the sun's rays. These are responsible for providing all of the electricity you will use. These only come with a few drawbacks. 
+The first is that they are less efficient than they are on Earth. 
+The influencing factors involve the dust in the atmosphere and the increased distance from the sun. This results in Mars only receiving less than half the sunlight that Earth receives. 
+The second drawback is that due to the seasons on Mars, the power they generate is not always constant. Fortunately the base is located near the equator. This allows the solar panels to provide a stable energy supply! Just be sure to check on them once in a while, because dust could cover them, blocking any sunlight from reaching the panels!"
 label_settings = SubResource("LabelSettings_iivbl")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1466,7 +1470,7 @@ visible = false
 [node name="Label" type="Label" parent="MOXIEInput/Window"]
 offset_right = 799.0
 offset_bottom = 499.0
-text = "This is where the MOXIE draws air in from! It pulls in fresh martian air straight from the source, and due to it's high concentration of carbon dioxide, the MOXIE is able to produce oxygen for you! To learn more about the MOXIE, checkout the machine itself in your base! Be sure to come back here from time to time to check if the filter is covered with Mars dust, or else the MOXIE won't be able to make any oxygen!"
+text = "This is where the MOXIE draws air in from! It pulls in martian air. Due to it's high concentration of carbon dioxide, the MOXIE is able to produce oxygen for you! To learn more about the MOXIE, checkout the machine itself in your base! Be sure to come back here from time to time to check if the filter is covered with Mars dust, or else the MOXIE won't be able to make any oxygen!"
 label_settings = SubResource("LabelSettings_iivbl")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1550,7 +1554,7 @@ visible = false
 [node name="Label" type="Label" parent="WaterExtractor/Window"]
 offset_right = 799.0
 offset_bottom = 499.0
-text = "“Water is where life is”. To survive on Mars, one must have access to water. Finding it on Mars is no easy task. Mars’ surface is practically an open desert. Nonetheless, water does exist on the planet and there are two main places it can be found (there are other locations but we will focus on these two). One is the poles of Mars, the second is the ice underneath the surface. Extracting water from the poles is far too difficult with temperatures reaching -240*F. The more practical choice is to drill below the surface and turn that ice into usable water. This water machine would likely be a “Rodriguez Well”, it is a type of machine that inserts a heat exchanger to melt the ice below and create a pocket of water. It is then pumped upwards to the surface for use. As you progress through this game you will have to maintain and fix any damage that appears on this machine. If not, water supply will stop, and the crops will stop growing. "
+text = "“Water is where life is”. To survive on Mars, one must have access to water. Finding it on Mars is no easy task. Mars’ surface is practically an open desert. Nonetheless, water does exist on the planet and there are two main places it can be found. One is the poles of Mars, the second is the ice underneath the surface. Extracting water from the poles is far too difficult with temperatures reaching -240*F. The more practical choice is to drill below the surface and turn that ice into usable water. This water machine would likely be a “Rodriguez Well”, it is a type of machine that inserts a heat exchanger to melt the ice below and create a pocket of water. It is then pumped upwards to the surface for use. Be sure to fix any damage that appears on this machine after a storm. If left unchecked, water supply will stop, and the crops will stop growing. "
 label_settings = SubResource("LabelSettings_iivbl")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1587,7 +1591,7 @@ visible = false
 [node name="Label" type="Label" parent="IntroText"]
 offset_right = 799.0
 offset_bottom = 499.0
-text = "Welcome to Mars astronaut! Here, you can explore and learn about some of the different systems you would need to survive on Mars. In the top right, you will see four different colored bars. The red is for your health, green is for your hunger, yellow is for your energy, and blue is for your oxygen. If your oxygen or hunger bars start to decrease, you will start to lose health! You can refill your oxygen by going into your base that is east of you. Go on and explore your base to learn about all the different components! Don't worry about your oxygen orr hunger depleting while you're reading information, it won't go down! To get started, close this window."
+text = "Welcome to Mars astronaut! Here, you can explore and learn about some of the different systems you would need to survive on Mars. In the top left, you will see three different colored bars. The red is for your health, green is for your hunger, and blue is for your oxygen. If your oxygen or hunger bars start to decrease, you will start to lose health! You can refill your oxygen by going into your base that is east of you. Go on and explore your base to learn about all the different components! Don't worry about your oxygen or hunger depleting while you're reading information, it won't go down! To get started, close this window."
 label_settings = SubResource("LabelSettings_iivbl")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1616,7 +1620,7 @@ visible = false
 [node name="Label" type="Label" parent="BaseIntroText"]
 offset_right = 799.0
 offset_bottom = 499.0
-text = "Welcome to your base! Here, you don't have to worry about oxygen or radiation. In order to protect you from radiation, the base has been built underground. The reason for this is because Mars does not have a atmosphere and magnetic field like Earth, which allows much more radiation from the Sun to reach the surface. The soil on top of you helps to save you from this! To learn about how your base is provided with oxygen, go over to the vent on the floor. To learn about your food supply, go over to the plants. To monitor the functionality of your life support systems, go over to the computer. Hope you find it comfy!"
+text = "Welcome to your base! Here, you don't have to worry about oxygen or radiation. In order to protect you from radiation, the base has been built underground. The reason for this is because Mars has an extremely thin atmosphere and no magnetic field like Earth, which allows much more radiation from the Sun to reach the surface. The soil (regolith) is able to serve as natural shielding from radiation! To learn about how your base is provided with oxygen, go over to the vent on the floor. To learn about your food supply, go over to the plants. To monitor the functionality of your life support systems, go over to the computer. Hope you find it comfy!"
 label_settings = SubResource("LabelSettings_iivbl")
 horizontal_alignment = 1
 vertical_alignment = 1
