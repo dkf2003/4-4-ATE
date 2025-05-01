@@ -16,8 +16,10 @@ res://addons/gut/gui/ShortcutButton.tscn::6ddf0e7890c3194bdac61bd5137d1319::1743
 res://addons/gut/GutScene.tscn::b1de5d0fa7715c721b0575aabddb1c00::1743993386::res://.godot/exported/133200997/export-2f0cb05a5e71328ea0af1eb4f93c4e22-GutScene.scn
 res://addons/gut/gut_loader_the_scene.tscn::568daffd38790702255b5a173ad4441f::1743993387::res://.godot/exported/133200997/export-34f11fc3cc3883e31a2efc4f77f66ef2-gut_loader_the_scene.scn
 res://addons/gut/UserFileViewer.tscn::5ef36894c3610b3cf8a6ef603616269f::1743993387::res://.godot/exported/133200997/export-009fff9a427a23713aab85c867002442-UserFileViewer.scn
-res://Scenes/crate.tscn::3efb734cd21cfa26e15c4364aec4668a::1744758516::res://.godot/exported/133200997/export-a4680594e8a68a77f3fb58b857d74404-crate.scn
-res://Scenes/game.tscn::3e55efc49708bfb13502c3a65c6f6f48::1744758516::res://.godot/exported/133200997/export-d45e16ca8d170891778b9dcfa9c69e68-game.scn
-res://Scenes/mars_plant.tscn::352e9f246d0545137eeb508b0533df6c::1744758516::res://.godot/exported/133200997/export-06b5c84161d4a4d364877fd523098a5f-mars_plant.scn
-res://Scenes/player.tscn::5bc8598eb93f12e8adf81fb523dadd0b::1744758516::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/crate.tscn::3efb734cd21cfa26e15c4364aec4668a::1745363525::res://.godot/exported/133200997/export-a4680594e8a68a77f3fb58b857d74404-crate.scn
+res://Scenes/game.tscn::c757e65e3201b0e77201af6fe77fd091::1746133246::res://.godot/exported/133200997/export-d45e16ca8d170891778b9dcfa9c69e68-game.scn
+res://Scenes/mars_plant.tscn::352e9f246d0545137eeb508b0533df6c::1745363525::res://.godot/exported/133200997/export-06b5c84161d4a4d364877fd523098a5f-mars_plant.scn
+res://Scenes/player.tscn::0ad33b558a5314f8e39b60160256b6d7::1745437268::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
 res://default_bus_layout.tres::ce578221738be7762e888f867a57b500::1743275315::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://Scenes/base_plants.tscn::cfb25b7a507e70f1537be9abad497af8::1745711367::res://.godot/exported/133200997/export-0887ec2f0870a4d9be1f93f788a4e5be-base_plants.scn
+res://Scenes/gameover.tscn::c38fb607c2ae148d8d0727cc57205c92::1745711367::res://.godot/exported/133200997/export-ae31bacc7b38356f17a480df7a845ca8-gameover.scn
