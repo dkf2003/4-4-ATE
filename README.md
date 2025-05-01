@@ -13,3 +13,19 @@ This is actually a school project, so we have to do it alone
 
 **5. Who maintains and contributes to the project**
 The maintainers of this project are Larc, Daniel, Alice, and Lakshya
+
+How to install and run the game: 
+- Install the files either through downloading the zip or cloning the repository.
+- For the zip file, extract it to a suitable directory
+
+- Install the Godot Engine. (Its quick)
+- https://godotengine.org/
+- Click Download and follow installation.
+
+- Once you run Godot, import a project and select the extracted folder from the ZIP.
+- From there you can either run the project directly from the engine or export it to an executable.
+
+- Ensure Godot is in online mode via Editor settings in the Editor tab above.
+- Export the game by clicking "Download and Install" (we used Github mirror)
+
+- Your machine should now have the executable which runs the game. 
