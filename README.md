@@ -27,6 +27,6 @@ How to install and run the game:
 - To run firstGame.exe, ensure you have Godot installed and double click it
 
 - To run the game through the Godot editor, first open Godot
-- Then import a project and select the folder you downloaded
+- Then import a project and select the firstgame folder
 - Open the project(if it is not open already) and wait for the files to load
 - Once loaded, click on the play icon on the top right of your screen
