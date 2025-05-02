@@ -22,10 +22,11 @@ How to install and run the game:
 - https://godotengine.org/
 - Click Download and follow installation.
 
-- Once you run Godot, import a project and select the extracted folder from the ZIP.
-- From there you can either run the project directly from the engine or export it to an executable.
+- From here you have two options, run the firstGame.exe file or run the game through Godot
 
-- Ensure Godot is in online mode via Editor settings in the Editor tab above.
-- Export the game by clicking "Download and Install" (we used Github mirror)
+- To run firstGame.exe, ensure you have Godot installed and double click it
 
-- Your machine should now have the executable which runs the game. 
+- To run the game through the Godot editor, first open Godot
+- Then import a project and select the folder you downloaded
+- Open the project(if it is not open already) and wait for the files to load
+- Once loaded, click on the play icon on the top right of your screen
